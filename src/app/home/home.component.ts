@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     this.tiles = [
       {
         title: 'Title1',
-        text: 'Lorem ipsum'
+        text: ''
       }
     ];
   }
