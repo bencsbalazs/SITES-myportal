@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-home',
@@ -7,21 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  tiles: [{
-    title: string,
-    text: string
-  }];
+  constructor(
+    private configService: ConfigService
+  ) { }
 
-  constructor() {
-    this.tiles = [
-      {
-        title: 'Title1',
-        text: ''
-      }
-    ];
+  getConfig(): void {
+    this.tiles = this.configService.getConfig();
   }
 
   ngOnInit() {
+    this.getConfig();
   }
 
 }

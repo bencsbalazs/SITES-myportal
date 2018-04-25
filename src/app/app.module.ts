@@ -8,7 +8,7 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
-import { GettilesService } from './services/gettiles.service';
+import { ConfigService } from './config.service';
 
 
 @NgModule({
@@ -23,7 +23,10 @@ import { GettilesService } from './services/gettiles.service';
     Ng2PageScrollModule,
     HttpClientModule
   ],
-  providers: [GettilesService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    ConfigService
+  ]
 })
+
 export class AppModule { }
