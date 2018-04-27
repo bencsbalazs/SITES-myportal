@@ -4,11 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
-import { ConfigService } from './config.service';
 
 
 @NgModule({
@@ -20,12 +19,11 @@ import { ConfigService } from './config.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    Ng2PageScrollModule,
+    NgxPageScrollModule,
     HttpClientModule
   ],
   bootstrap: [AppComponent],
   providers: [
-    ConfigService
   ]
 })
 

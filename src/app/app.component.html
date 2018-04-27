@@ -1,17 +1,16 @@
 <header>
-  <div class="inner">{{title}}</div>
+  <div class="inner">{{header.slogan[0]}}</div>
 </header>
-
 <nav class="navbar navbar-expand-md navbar-dark bg-dark" data-spy="affix" data-offset-top="197">
-  <a class="navbar-brand" href="#">Example page</a>
+  <a class="navbar-brand" href="/">{{navbar.title}}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/home">Home</a>
+      <li *ngFor='let item of navbar.menu' class='nav-item'>
+        <a class="nav-link"  href='{{item.link}}'>{{item.title}}</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/blog">Blog</a>
@@ -40,28 +39,10 @@
   <div style="background-color: #6351ce;">
     <div class="container">
       <div class="row py-4 d-flex align-items-center">
-        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-          <h6 class="mb-0 white-text">Találj meg a közösségi hálózaton is!
-          </h6>
-        </div>
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0"><h6 class="mb-0 white-text">{{social.text}}</h6></div>
         <div class="col-md-6 col-lg-7 text-center text-md-right">
-          <a class="fb-ic ml-0">
-            <i class="fa fa-facebook-square fa-3x white-text mr-lg-4"> </i>
-          </a>
-          <a class="tw-ic">
-            <i class="fa fa-twitter-square fa-3x white-text mr-lg-4"> </i>
-          </a>
-          <a class="gplus-ic">
-            <i class="fa fa-google-plus-square fa-3x white-text mr-lg-4"> </i>
-          </a>
-          <a class="li-ic">
-            <i class="fa fa-linkedin fa-3x white-text mr-lg-4"> </i>
-          </a>
-          <a class="ins-ic">
-            <i class="fa fa-instagram fa-3x white-text mr-lg-4"> </i>
-          </a>
-          <a class="git-ic">
-            <i class="fa fa-github fa-3x white-text mr-lg-4"> </i>
+          <a *ngFor='let icon of social.icons' class="ml-0" href="{{icon.link}}">
+            <i class="fa {{icon.class}} fa-3x white-text mr-lg-4"> </i>
           </a>
         </div>
       </div>
