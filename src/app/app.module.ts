@@ -1,30 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { NgStickyDirective } from 'ng-sticky';
 
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    NgStickyDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgxPageScrollModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   bootstrap: [AppComponent],
   providers: [
   ]
 })
 
-export class AppModule { }
+export class AppModule {
+}

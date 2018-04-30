@@ -17,8 +17,29 @@ export class HomeComponent implements OnInit {
         'text': 'This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.'
       },
       {
-        'title': 'Title2',
-        'text': 'text2'
+        'title': 'Title1',
+        // tslint:disable-next-line:max-line-length
+        'text': 'This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.'
+      },
+      {
+        'title': 'Title1',
+        // tslint:disable-next-line:max-line-length
+        'text': 'This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.'
+      },
+      {
+        'title': 'Title1',
+        // tslint:disable-next-line:max-line-length
+        'text': 'This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.'
+      },
+      {
+        'title': 'Title1',
+        // tslint:disable-next-line:max-line-length
+        'text': 'This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.'
+      },
+      {
+        'title': 'Title1',
+        // tslint:disable-next-line:max-line-length
+        'text': 'This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.'
       }
     ];
     this.images = [
@@ -28,8 +49,28 @@ export class HomeComponent implements OnInit {
         'alt': 'Placeholder'
       },
       {
-        'src': '',
-        'title': 'Placeholder',
+        'src': 'http://via.placeholder.com/200x200',
+        'title': 'Place',
+        'alt': 'Placeholder'
+      },
+      {
+        'src': 'http://via.placeholder.com/200x200',
+        'title': 'Place',
+        'alt': 'Placeholder'
+      },
+      {
+        'src': 'http://via.placeholder.com/200x200',
+        'title': 'Place',
+        'alt': 'Placeholder'
+      },
+      {
+        'src': 'http://via.placeholder.com/200x200',
+        'title': 'Place',
+        'alt': 'Placeholder'
+      },
+      {
+        'src': 'http://via.placeholder.com/200x200',
+        'title': 'Place',
         'alt': 'Placeholder'
       }
     ];
