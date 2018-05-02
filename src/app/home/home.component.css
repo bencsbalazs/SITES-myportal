@@ -1,0 +1,16 @@
+#services{
+  background: #f00;
+}
+
+.maincontainer{
+  padding: 4em 0 8em 0;
+}
+
+.cards:hover{
+  border: solid .1 #fff;
+  background: rgba(255,255,255,.8);
+  transform: scale(2,2);
+  font-size: 60%;
+  border-radius: 50%;
+  transition: ease-in-out 1s;
+}
