@@ -1,16 +1,32 @@
 #services{
-  background: #f00;
+  background: rgba(255,0,0,0.9);
 }
-
 .maincontainer{
-  padding: 4em 0 8em 0;
+  padding: 4em 0 8em 0 !important;
+  margin: 10em 0 !important;
+  box-shadow:
+    inset 0px 1em 1em #fff,
+    inset 0px -1em 1em #fff;
 }
-
+.cards{
+  transition: ease-in-out 500;
+}
 .cards:hover{
-  border: solid .1 #fff;
-  background: rgba(255,255,255,.8);
-  transform: scale(2,2);
-  font-size: 60%;
-  border-radius: 50%;
-  transition: ease-in-out 1s;
+  border: solid .2 #fff;
+  box-shadow: 0 0 1em #fff inset;
+  border-radius: 2em;
+}
+.cards h3 {
+  border-bottom: solid 1px transparent;
+}
+.cards:hover h3{
+  border-bottom: solid 1px #fff;
+}
+#contactme input{
+  margin-top: 3em;
+}
+#contactme input:focus{
+  background: rgba(255,0,255,.8);
+  border-bottom: solid .4em rgb(255, 0, 255);
+  box-shadow: 0 0 0.5em rgb(255, 0, 255);
 }

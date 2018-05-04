@@ -7,30 +7,32 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 cards" *ngFor="let tile of tiles">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 cards py-2" *ngFor="let tile of tiles">
         <h3 class="text-center">{{tile.title}}</h3>
         <div class="text-justify">{{tile.text}}</div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="row" id="portfolio">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" style="background: #000;" src="" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row" id="partners">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let image of images">
-      <img class="img-responsive" src='{{image.src}}' alt='{{image.alt}}' title='{{image.title}}'>
+<div class="container-fluid maincontainer" id="portfolio">
+  <div class="row">
+    <div class="container">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" style="background: #000;" src="" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row" id="contactme">
-    <div class="row">
+<div class="container" id="partners">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let image of images">
+      <img class="img-responsive my-5" src='{{image.src}}' alt='{{image.alt}}' title='{{image.title}}'>
+    </div>
+  </div>
+</div>
+<div class="container-fluid maincontainer" id="contactme">
+  <div class="row">
+    <div class="container">
       <div class="col-md-6">
         <div class="form-group">
           <label for="form_name">Name *</label>
@@ -41,7 +43,6 @@
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <label for="form_email">Email *</label>
           <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required"
             data-error="Valid email is required.">
           <div class="help-block with-errors"></div>
@@ -49,7 +50,6 @@
       </div>
       <div class="col-md-12">
         <div class="form-group">
-          <label for="form_message">Message *</label>
           <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required"
             data-error="Please,leave us a message."></textarea>
           <div class="help-block with-errors"></div>
