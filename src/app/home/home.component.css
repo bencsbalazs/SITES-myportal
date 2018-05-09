@@ -1,6 +1,3 @@
-#services{
-  background: rgba(255,0,0,0.9);
-}
 .maincontainer{
   padding: 4em 0 8em 0 !important;
   margin: 10em 0 !important;
@@ -12,21 +9,16 @@
   transition: ease-in-out 500;
 }
 .cards:hover{
-  border: solid .2 #fff;
-  box-shadow: 0 0 1em #fff inset;
+  border: solid .2 #28a745;
+  box-shadow: 0 0 1em #28a745 inset;
   border-radius: 2em;
 }
 .cards h3 {
   border-bottom: solid 1px transparent;
 }
 .cards:hover h3{
-  border-bottom: solid 1px #fff;
+  border-bottom: solid 1px #28a745;
 }
 #contactme input{
   margin-top: 3em;
-}
-#contactme input:focus{
-  background: rgba(255,0,255,.8);
-  border-bottom: solid .4em rgb(255, 0, 255);
-  box-shadow: 0 0 0.5em rgb(255, 0, 255);
 }

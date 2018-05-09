@@ -1,0 +1,9 @@
+{
+  "header": {
+    "title": "Translation demo",
+    "slogan": {
+      "everyproblem": "This is a simple demonstration app for ngx-translate",
+      "lotofknowledge": "This is a simple demonstration app for ngx-translate"
+    }
+  }
+}

@@ -2,10 +2,10 @@
   <div class="inner">
     <figure>
       <img src="">
-      <figcaption>{{footer.name}}</figcaption>
+      <figcaption class="text-primary">{{ header.title }}</figcaption>
     </figure>
     <ul id="slogans">
-      <li *ngFor="let banner of header.slogan">{{banner}}</li>
+      <li class="text-info" *ngFor="let text of header.slogan">{{ text }}</li>
     </ul>
   </div>
 </header>
@@ -31,7 +31,7 @@
   <router-outlet></router-outlet>
 </main>
 <footer class="page-footer font-small unique-color-dark pt-0">
-  <div style="background-color: #6351ce;">
+  <div class="bg-warning text-white">
     <div class="container">
       <div class="row py-4 d-flex align-items-center">
         <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">

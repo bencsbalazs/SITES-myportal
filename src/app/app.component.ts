@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -52,11 +53,14 @@ export class AppComponent {
     }
   };
 
-  constructor() {
+  constructor(private translate: TranslateService) {
+
+    translate.setDefaultLang('en');
+
     this.header = {
       slogan: [
-        'Every problems....',
-        'A lot of knowledge...'
+        'everyproblem',
+        'lotofknowledge'
       ]
     };
     this.navbar = {
