@@ -1,9 +1,30 @@
 {
   "header": {
-    "title": "Translation demo",
-    "slogan": {
-      "everyproblem": "This is a simple demonstration app for ngx-translate",
-      "lotofknowledge": "This is a simple demonstration app for ngx-translate"
+    "title" : "This is the title of the page!",
+    "slogan": [
+      "A lot of knowledge...",
+      "Every problems of the word..."
+    ]
+  },
+  "navbar": {
+    "title": "Example angular page",
+      "menu": [
+        { "title": "Home", "link": "/home", "scroll": "" },
+        { "title": "Blog", "link": "/blog", "scroll": "" },
+        { "title": "Rólam", "link": "/home#services", "scroll": "pageScroll" },
+        { "title": "Portfólió", "link": "/home#portfolio", "scroll": "pageScroll" },
+        { "title": "Kapcsolat", "link": "/home#contactme", "scroll": "pageScroll" }
+      ]
+  },
+  "social": {
+      "text": "Find me on social networks as well!",
+      "icons": [
+        { "class": "fa-facebook-square", "link": "" },
+        { "class": "fa-twitter-square", "link": "" },
+        { "class": "fa-google-plus-square", "link": "" },
+        { "class": "fa-linkedin", "link": "" },
+        { "class": "fa-instagram", "link": "" },
+        { "class": "fa-github", "link": "" }
+      ]
     }
-  }
 }

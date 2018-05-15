@@ -16,17 +16,18 @@
 </div>
 <div class="container-fluid maincontainer" id="portfolio">
   <div class="row">
-    <div class="container">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" style="background: #000;" src="" allowfullscreen></iframe>
-      </div>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" style="background: #000;" src="" allowfullscreen="allowfullscreen"></iframe>
     </div>
   </div>
 </div>
-<div class="container bg-light" id="partners">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let image of images">
-      <img class="img-responsive my-5" src='{{image.src}}' alt='{{image.alt}}' title='{{image.title}}'>
+<div class="container-fluid bg-light" id="partners">
+  <div class="row"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let image of images">
+        <img class="img-responsive my-5" src='{{image.src}}' alt='{{image.alt}}' title='{{image.title}}'>
+      </div>
     </div>
   </div>
 </div>
@@ -36,22 +37,19 @@
       <div class="col-md-6">
         <div class="form-group">
           <label for="form_name">Name *</label>
-          <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required"
-            data-error="Firstname is required.">
+          <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required"
-            data-error="Valid email is required.">
+          <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
       <div class="col-md-12">
         <div class="form-group">
-          <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required"
-            data-error="Please,leave us a message."></textarea>
+          <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
           <div class="help-block with-errors"></div>
         </div>
       </div>
@@ -60,7 +58,8 @@
       </div>
       <div class="col-md-12">
         <p class="text-muted">
-          <strong>*</strong> These fields are required.
+          <strong>*</strong>
+          These fields are required.
         </p>
       </div>
     </div>
