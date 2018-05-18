@@ -1,13 +1,13 @@
 <div class="container-fluid maincontainer bg-light" id="services">
   <div class="row">
     <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
-      <h2>Title</h2>
-      <small class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+      <h2>{{ 'home.services.title' | translate }}</h2>
+      <small class="text-center">{{ 'home.services.slogan' | translate }}</small>
     </div>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 cards py-2" *ngFor="let tile of tiles">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 cards py-2" *ngFor="let tile of ( 'home.services.tiles' | translate)">
         <h3 class="text-center">{{tile.title}}</h3>
         <div class="text-justify">{{tile.text}}</div>
       </div>
@@ -16,34 +16,46 @@
 </div>
 <div class="container-fluid maincontainer" id="portfolio">
   <div class="row">
+  <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
+      <h2>{{ 'home.portfolio.title' | translate }}</h2>
+      <small class="text-center">{{ 'home.portfolio.slogan' | translate }}</small>
+    </div>
     <div class="embed-responsive embed-responsive-16by9">
       <iframe class="embed-responsive-item" style="background: #000;" src="" allowfullscreen="allowfullscreen"></iframe>
     </div>
   </div>
 </div>
 <div class="container-fluid bg-light" id="partners">
-  <div class="row"></div>
+  <div class="row">
+  <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
+      <h2>{{ 'home.partners.title' | translate }}</h2>
+      <small class="text-center">{{ 'home.partners.slogan' | translate }}</small>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let image of images">
-        <img class="img-responsive my-5" src='{{image.src}}' alt='{{image.alt}}' title='{{image.title}}'>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let image of ('home.partners.images' | translate)">
+        <img class="img-responsive my-5 mw-100" src='{{image.src}}' alt='{{image.alt}}' title='{{image.title}}'>
       </div>
     </div>
   </div>
 </div>
 <div class="container-fluid maincontainer" id="contactme">
   <div class="row">
+  <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
+      <h2>{{ 'home.contact.title' | translate }}</h2>
+      <small class="text-center">{{ 'home.contact.slogan' | translate }}</small>
+    </div>
     <div class="container">
       <div class="col-md-6">
         <div class="form-group">
-          <label for="form_name">Name *</label>
-          <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+          <input id="form_name" type="text" name="name" class="form-control" placeholder="{{ 'home.contact.form.name' | translate }} *" required="required" data-error="Firstname is required.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+          <input id="form_email" type="email" name="email" class="form-control" placeholder="{{ 'home.contact.form.email' | translate }} *" required="required" data-error="Valid email is required.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
@@ -55,12 +67,10 @@
       </div>
       <div class="col-md-12">
         <input type="submit" class="btn btn-success btn-send" value="Send message">
-      </div>
-      <div class="col-md-12">
-        <p class="text-muted">
+        <span class="text-muted">
           <strong>*</strong>
           These fields are required.
-        </p>
+        </span>
       </div>
     </div>
   </div>

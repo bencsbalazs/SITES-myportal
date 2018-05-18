@@ -14,7 +14,8 @@
         { "title": "Rólam", "link": "/home#services", "scroll": "pageScroll" },
         { "title": "Portfólió", "link": "/home#portfolio", "scroll": "pageScroll" },
         { "title": "Kapcsolat", "link": "/home#contactme", "scroll": "pageScroll" }
-      ]
+      ],
+      "search": "Search"
   },
   "social": {
       "text": "Find me on social networks as well!",
@@ -26,5 +27,134 @@
         { "class": "fa-instagram", "link": "" },
         { "class": "fa-github", "link": "" }
       ]
+    },
+    "footer": {
+      "desc": "Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "apps": {
+        "title": "Products",
+        "links": [
+          { "name": "E-learning site", "link": "" },
+          { "name": "Content frame", "link": "" }
+        ]
+      },
+      "links": {
+        "title": "",
+        "links": [
+          { "name": "", "link": "" }
+        ]
+      },
+      "contact": {
+        "title": "Contact",
+        "links": [
+          {
+            "icon": "home",
+            "link": "https://www.google.com/maps/place/Budapest,+M%C3%B3r+u.+14,+1135+Magyarorsz%C3%A1g/@47.5244039,19.08082,17z/data=!3m1!4b1!4m5!3m4!1s0x4741db90036ba625:0xf315f50b114f1c35!8m2!3d47.5244039!4d19.083014",
+            "text": "1135 Budapest, Mór utca 14/2, HU"
+          },
+          { "icon": "envelope", "link": "mailto:bencsbalazs@gmail.com", "text": "bencsbalazs@gmail.com" },
+          { "icon": "viber", "link": "", "text": "" },
+          { "icon": "skype", "link": "", "text": "" }
+        ]
+      }
+    },
+    "home": {
+      "services": {
+        "title": "Services",
+        "slogan": "",
+        "tiles": [
+      {
+        "title": "Title",
+        "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+      },
+      {
+        "title": "Title1",
+        "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+      },
+      {
+        "title": "Title1",
+        "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+      },
+      {
+        "title": "Title1",
+        "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+      },
+      {
+        "title": "Title1",
+        "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+      },
+      {
+        "title": "Title1",
+        "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+      },
+      {
+        "title": "Title1",
+        "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+      },
+      {
+        "title": "Title1",
+        "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+      }
+    ]
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "slogan": ""
+      },
+      "partners": {
+        "title": "Partners",
+        "slogan": "Some of my partners",
+        "images": [
+      {
+        "src": "/assets/images/portfolio/portfolio_mav.jpg",
+        "title": "Place",
+        "alt": "Placeholder"
+      },
+      {
+        "src": "/assets/images/portfolio/portfolio_gysev.jpg",
+        "title": "Place",
+        "alt": "Placeholder"
+      },
+      {
+        "src": "http://via.placeholder.com/200x200",
+        "title": "Place",
+        "alt": "Placeholder"
+      },
+      {
+        "src": "http://via.placeholder.com/200x200",
+        "title": "Place",
+        "alt": "Placeholder"
+      },
+      {
+        "src": "/assets/images/portfolio/portfolio_nebih.jpg",
+        "title": "Place",
+        "alt": "Placeholder"
+      },
+      {
+        "src": "/assets/images/portfolio/portfolio_raiffeisen.jpg",
+        "title": "Place",
+        "alt": "Placeholder"
+      },
+      {
+        "src": "http://via.placeholder.com/200x200",
+        "title": "Place",
+        "alt": "Placeholder"
+      },
+      {
+        "src": "http://via.placeholder.com/200x200",
+        "title": "Place",
+        "alt": "Placeholder"
+      }
+    ]
+      },
+      "contact":{
+        "title":"Contact Me",
+        "slogan":"",
+        "form":{
+          "name":"Please enter your name",
+          "email":"Please enter your email",
+          "message": "",
+          "send": ""
+        }
+      }
     }
 }

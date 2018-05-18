@@ -19,6 +19,12 @@
 .cards:hover h3{
   border-bottom: solid 1px #28a745;
 }
-#contactme input{
-  margin-top: 3em;
+#contactme input[type="text"],#contactme input[type="email"]{
+  border: none;
+  border-bottom: solid 0.2em #f00033;
+}
+#contactme input:focus{
+  border: none;
+  box-shadow: none;
+  border-bottom: solid 0.2em #28a745;
 }
