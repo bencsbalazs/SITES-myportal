@@ -1,8 +1,7 @@
 var express = require('express');
 var path = require("path");
 var bodyParser = require('body-parser');
-var mongo = require("mongoose");
-
+var mongo = require("mongodb");
 var db = mongo.connect("mongodb://localhost:27017/blsapp", function (err, response) {
   if (err) {
     console.log(err);
@@ -30,22 +29,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-var Schema = mongo.Schema;
-
-var UsersSchema = new Schema({
-  name: {
-    type: String
-  },
-  address: {
-    type: String
-  },
-}, {
-  versionKey: false
-});
-
-//var model = mongo.model('users', UsersSchema, 'users');
-
 app.listen(8080, function () {
-
   console.log('Example app listening on port 8080!')
 })

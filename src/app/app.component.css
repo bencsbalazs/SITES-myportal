@@ -2,15 +2,7 @@
     width: 100%;
     z-index: 999;
 }
-#profilepicture {
-  position: absolute;
-  margin: -50%;
-}
 #profilpicture > figcaption{
-position: absolute;
-bottom: -10%;
-z-index: 999;
-}
-#slogans{
-  clear: both;
+  margin-top: -20%;
+  z-index: 999;
 }

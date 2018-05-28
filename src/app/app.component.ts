@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 export class AppComponent {
   headerslogans = document.getElementsByClassName('slg');
+
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
   }

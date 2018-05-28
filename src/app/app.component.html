@@ -1,11 +1,11 @@
 <header>
   <div class="inner">
-    <figure id="profilpicture">
-      <img class="img-rounded" src="http://via.placeholder.com/400x400">
-      <figcaption class="text-primary">{{ 'header.title' | translate}}</figcaption>
+  <div>
+    <figure id="profilpicture" class="text-center">
+      <img class="rounded-circle" src="http://via.placeholder.com/300x300">
+      <figcaption class="text-primary text-center h2">{{ 'header.title' | translate}}</figcaption>
     </figure>
-    <div>
-    <ul id="slogans">
+    <ul class="mt-5">
       <li class="text-info slg" *ngFor="let slogan of ('header.slogan' | translate)">{{ slogan }}</li>
     </ul>
     </div>
