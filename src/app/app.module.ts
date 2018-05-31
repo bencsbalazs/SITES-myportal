@@ -35,7 +35,9 @@ import { BlogComponent } from './blog/blog.component';
     })
   ],
   bootstrap: [AppComponent],
-  providers: [CommonService]
+  providers: [
+    CommonService
+  ]
 })
 
 export class AppModule { }
