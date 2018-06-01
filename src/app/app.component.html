@@ -3,16 +3,17 @@
   <div>
     <figure id="profilpicture" class="text-center">
       <img class="rounded-circle" src="http://via.placeholder.com/300x300">
-      <figcaption class="text-primary text-center h2">{{ 'header.title' | translate}}</figcaption>
+      <figcaption class="text-primary text-center h2"><em>{{ 'header.title' | translate }}</em></figcaption>
     </figure>
     <ul class="mt-5">
-      <li class="text-info slg" *ngFor="let slogan of ('header.slogan' | translate)">{{ slogan }}</li>
+      <!-- <li class="text-info slg" *ngFor="let slogan of ('header.slogan' | translate)">{{ slogan }}</li> -->
+      <li class="text-info">{{ slider }}</li>
     </ul>
     </div>
   </div>
 </header>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark" ng-sticky [offSet]="0" [addClass]="'is-sticky'">
-  <a class="navbar-brand" href="/">{{ 'navbar.title' | translate}}</a>
+  <a class="navbar-brand" href="/">{{ 'navbar.title' | translate }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

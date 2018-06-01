@@ -10,10 +10,10 @@ import { TextsliderService } from './services/textslider.service';
 })
 
 export class AppComponent {
-  slider: Array<string>;
+  slider: string;
   constructor(private translate: TranslateService, private textslider: TextsliderService) {
     translate.setDefaultLang('en');
-    this.slider = textslider.messages;
+    this.slider = textslider.actmsg;
   }
   switchLanguage(language: string) {
     this.translate.use(language);
