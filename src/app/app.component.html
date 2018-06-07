@@ -1,24 +1,25 @@
 <header>
   <div class="inner">
-  <div>
-    <figure id="profilpicture" class="text-center">
-      <img class="rounded-circle" src="http://via.placeholder.com/300x300">
-      <figcaption class="text-primary text-center h2"><em>{{ 'header.title' | translate }}</em></figcaption>
-    </figure>
-    <ul class="mt-5">
-      <!-- <li class="text-info slg" *ngFor="let slogan of ('header.slogan' | translate)">{{ slogan }}</li> -->
-      <li class="text-info">{{ slider }}</li>
-    </ul>
+    <div class="wow fadeIn">
+      <figure id="profilpicture" class="text-center">
+        <img class="rounded-circle" src="http://via.placeholder.com/300x300">
+        <figcaption class="text-primary text-center h2">
+          <em>{{ 'header.title' | translate }}</em>
+        </figcaption>
+      </figure>
     </div>
   </div>
+  <app-carousel></app-carousel>
 </header>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark" ng-sticky [offSet]="0" [addClass]="'is-sticky'">
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" ng-sticky="ng-sticky" [offSet]="0" [addClass]="'is-sticky'">
   <a class="navbar-brand" href="/">{{ 'navbar.title' | translate }}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" data-spy="scroll" data-offset="0" data-target="navbarCollapse">
       <li *ngFor="let item of ('navbar.menu' | translate)" class='nav-item'>
         <a class="nav-link" href='{{item.link}}'>{{item.title}}</a>
       </li>
@@ -32,7 +33,7 @@
 <main role="main" id="main">
   <router-outlet></router-outlet>
 </main>
-<footer class="page-footer font-small unique-color-dark pt-0">
+<footer class="page-footer font-small unique-color-dark pt-0 mt-5">
   <div class="bg-warning text-white">
     <div class="container">
       <div class="row py-4 d-flex align-items-center">

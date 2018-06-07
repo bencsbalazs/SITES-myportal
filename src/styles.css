@@ -1,30 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
+@import "~animate.css/animate.css";
 
-html,body {
-	position: relative;
-	height: 100%;
-	margin: 0;
-	transition: linear 1s;
+html,
+body,
+header,
+.view {
+  height: 100%;
 }
 
-header {
-	display: -ms-flexbox;
-	display: -webkit-box;
-	display: flex;
-	-ms-flex-pack: center;
-	-webkit-box-pack: center;
-	justify-content: center;
-	color: #fff;
-	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-	box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-	height: 100%;
+/* Carousel*/
+.carousel,
+.carousel-item,
+.carousel-item.active {
+  height: 100%;
+}
+.carousel-inner {
+  height: 100%;
 }
 
-header>div {
-	display: flex;
-	margin: auto;
+header > .inner {
+  z-index: 999;
 }
 
 .affix {
