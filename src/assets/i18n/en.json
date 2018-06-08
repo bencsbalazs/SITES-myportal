@@ -155,7 +155,7 @@
     },
     "portfolio": {
       "title": "Portfolio",
-      "slogan": ""
+      "slogan": "View the story of my career."
     },
     "partners": {
       "title": "Partners",
@@ -202,9 +202,31 @@
         }
       ]
     },
+    "works": {
+      "title": "Works",
+      "slogan": "Some of my works I'm proud of",
+      "banner": "",
+      "rows": [
+        {
+          "icon": "",
+          "title": "",
+          "text": ""
+        },
+        {
+          "icon": "",
+          "title": "",
+          "text": ""
+        },
+        {
+          "icon": "",
+          "title": "",
+          "text": ""
+        }
+      ]
+    },
     "contact": {
       "title": "Contact Me",
-      "slogan": "",
+      "slogan": "If you find anything you interested about, write me a message.",
       "form": {
         "name": "Please enter your name",
         "email": "Please enter your email",
