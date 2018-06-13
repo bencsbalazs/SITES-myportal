@@ -16,7 +16,9 @@ import { CommonService } from './common.service';
 
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
+
 import { CarouselComponent } from './carousel/carousel.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     HomeComponent,
     BlogComponent,
     NgStickyDirective,
-    CarouselComponent
+    CarouselComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,8 @@
 }
 .cards:hover{
   border: solid .2 #000;
-  box-shadow: 0 0 1em #ccc;
+  box-shadow: 0 0 1em #ccc inset, 0 0 1em #000;
+  transform: rotate(10deg);
 }
 .cards h3 {
   border-bottom: solid 1px transparent;
