@@ -9,15 +9,15 @@
   transition: ease-in-out 500;
 }
 .cards:hover{
-  border: solid .2 #28a745;
-  box-shadow: 0 0 1em #28a745 inset;
-  border-radius: 2em;
+  border: solid .2 #000;
+  box-shadow: 0 0 1em #ccc inset, 0 0 1em #000;
+  transform: rotate(10deg);
 }
 .cards h3 {
   border-bottom: solid 1px transparent;
 }
 .cards:hover h3{
-  border-bottom: solid 1px #28a745;
+  border-bottom: solid 1px #ccc;
 }
 #contactme input[type="text"],#contactme input[type="email"]{
   border: none;

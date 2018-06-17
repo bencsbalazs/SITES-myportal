@@ -103,7 +103,7 @@
           "text": "bencsbalazs@gmail.com"
         },
         {
-          "icon": "viber",
+          "icon": "slack",
           "link": "",
           "text": ""
         },
@@ -121,35 +121,27 @@
       "slogan": "",
       "tiles": [{
           "title": "Title",
-          "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
         },
         {
           "title": "Title1",
-          "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
         },
         {
           "title": "Title1",
-          "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
         },
         {
           "title": "Title1",
-          "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
         },
         {
           "title": "Title1",
-          "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
         },
         {
           "title": "Title1",
-          "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
-        },
-        {
-          "title": "Title1",
-          "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
-        },
-        {
-          "title": "Title1",
-          "text": "This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
         }
       ]
     },
@@ -202,25 +194,25 @@
         }
       ]
     },
-    "works": {
-      "title": "Works",
-      "slogan": "Some of my works I'm proud of",
+    "aboutme": {
+      "title": "AdoutMe",
+      "slogan": "Some of my resultss I'm proud of",
       "banner": "",
       "rows": [
         {
-          "icon": "",
-          "title": "",
-          "text": ""
+          "icon": "code",
+          "title": "Title1",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
         },
         {
-          "icon": "",
-          "title": "",
-          "text": ""
+          "icon": "drupal",
+          "title": "Title2",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
         },
         {
-          "icon": "",
-          "title": "",
-          "text": ""
+          "icon": "pencil",
+          "title": "Title3",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
         }
       ]
     },
@@ -230,8 +222,9 @@
       "form": {
         "name": "Please enter your name",
         "email": "Please enter your email",
-        "message": "",
-        "send": ""
+        "message": "The place of the message content",
+        "send": "Send",
+        "required": "The fields marked with * are required."
       }
     }
   }
