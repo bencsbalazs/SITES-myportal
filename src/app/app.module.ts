@@ -18,7 +18,11 @@ import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 
 import { CarouselComponent } from './carousel/carousel.component';
-import { ServicesComponent } from './services/services.component';
+import { ServicesComponent } from './home/services/services.component';
+import { PartnersComponent } from './home/partners/partners.component';
+import { ContactmeComponent } from './home/contactme/contactme.component';
+import { AboutmeComponent } from './home/aboutme/aboutme.component';
+import { PortfolioComponent } from './home/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { ServicesComponent } from './services/services.component';
     BlogComponent,
     NgStickyDirective,
     CarouselComponent,
-    ServicesComponent
+    ServicesComponent,
+    PartnersComponent,
+    ContactmeComponent,
+    AboutmeComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +51,8 @@ import { ServicesComponent } from './services/services.component';
         deps: [HttpClient]
       }
     })
+  ],
+  exports: [
   ],
   bootstrap: [AppComponent],
   providers: [
