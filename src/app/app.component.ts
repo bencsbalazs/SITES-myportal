@@ -4,6 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { NgwWowService } from 'ngx-wow';
 import { Subscription }   from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

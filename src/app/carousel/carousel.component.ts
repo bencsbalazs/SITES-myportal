@@ -18,6 +18,7 @@ import { map } from 'rxjs/operators';
 })
 export class CarouselComponent implements OnInit {
   images: Array<string>;
+  slides;
   constructor(private _http: HttpClient) { }
   ngOnInit() {
     this._http.get('https://picsum.photos/list')
