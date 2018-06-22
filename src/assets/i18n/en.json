@@ -120,7 +120,7 @@
       "title": "Services",
       "slogan": "",
       "tiles": [{
-          "title": "Title",
+          "title": "Angular",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
         },
         {
@@ -128,8 +128,8 @@
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
         },
         {
-          "title": "Title1",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+          "title": "Frameworks",
+          "text": "Well-proven, popular frameworks: Drupal, Moodle, Wordpress installation, design, plugin and feature development."
         },
         {
           "title": "Title1",
