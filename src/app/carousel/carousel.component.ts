@@ -21,19 +21,15 @@ import * as data from '../../assets/i18n/en.json';
 export class CarouselComponent implements OnInit {
   images: Array<string>;
   slides = (<any>data).header.carousel.length;
-  map: Array<number>;
   constructor(private _http: HttpClient) { }
   ngOnInit() {
-    for (var i=1;i<=this.slides;i++){
-      map[i] = i;
-      console.log(i);
-    }
+    console.log(this.slides);
     this._http.get('https://picsum.photos/list')
       .pipe(map((images: Array<{ id: number }>) => this._randomImageUrls(images)))
       .subscribe(images => this.images = images);
   }
   private _randomImageUrls(images: Array<{ id: number }>): Array<string> {
-    return [map].map(() => {
+    return [1,2].map(() => {
       const randomId = images[Math.floor(Math.random() * images.length)].id;
       return `https://picsum.photos/900/500?image=${randomId}`;
     });
