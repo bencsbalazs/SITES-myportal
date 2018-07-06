@@ -1,6 +1,7 @@
 {
   "header": {
-    "title": "My Name is...",
+    "title": "Balazs Bencs",
+    "image": "/assets/images/me.jpeg",
     "carousel": [{
         "slogan": "A lot of knowledge is a dangerous thing, but so is a few.",
         "author": "Albert Einstein"
@@ -24,17 +25,17 @@
         "scroll": ""
       },
       {
-        "title": "Rólam",
+        "title": "About Me",
         "link": "/home#services",
         "scroll": "pageScroll"
       },
       {
-        "title": "Portfólió",
+        "title": "Portfolio",
         "link": "/home#portfolio",
         "scroll": "pageScroll"
       },
       {
-        "title": "Kapcsolat",
+        "title": "Contact Me",
         "link": "/home#contactme",
         "scroll": "pageScroll"
       }
@@ -45,7 +46,7 @@
     "text": "Find me on social networks as well!",
     "icons": [{
         "class": "fa-facebook-square",
-        "link": ""
+        "link": "https://www.facebook.com/balazs.bencs.9"
       },
       {
         "class": "fa-twitter-square",
@@ -57,7 +58,7 @@
       },
       {
         "class": "fa-linkedin",
-        "link": ""
+        "link": "https://www.linkedin.com/in/bal%C3%A1zs-bencs-499917102/"
       },
       {
         "class": "fa-instagram",
@@ -65,7 +66,7 @@
       },
       {
         "class": "fa-github",
-        "link": ""
+        "link": "https://github.com/bencsbalazs"
       }
     ]
   },
@@ -105,12 +106,12 @@
         {
           "icon": "slack",
           "link": "",
-          "text": ""
+          "text": "balazs.bencs@ibm.com"
         },
         {
           "icon": "skype",
           "link": "",
-          "text": ""
+          "text": "bencsbalazs"
         }
       ]
     }
@@ -163,56 +164,82 @@
           "alt": "GYSEV logo"
         },
         {
-          "src": "http://via.placeholder.com/200x200",
-          "title": "Place",
-          "alt": "Placeholder"
+          "src": "/assets/images/portfolio/portfolio_moodle.png",
+          "title": "Moodle LMS",
+          "alt": "Moodle logo"
         },
         {
-          "src": "http://via.placeholder.com/200x200",
-          "title": "Place",
-          "alt": "Placeholder"
+          "src": "/assets/images/portfolio/portfolio_ibm.jpg",
+          "title": "IBM ISSC Hungary Kft.",
+          "alt": "IBM logo"
         },
         {
           "src": "/assets/images/portfolio/portfolio_nebih.jpg",
-          "title": "Place",
-          "alt": "Placeholder"
+          "title": "Magyar Nemzeti ÉlelmiszerBiztonsági Hivatal",
+          "alt": "Logo of Nebih"
         },
         {
           "src": "/assets/images/portfolio/portfolio_raiffeisen.jpg",
-          "title": "Place",
-          "alt": "Placeholder"
+          "title": "Raiffeisen Bank Zrt.",
+          "alt": "Logo of Raiffeisen"
         },
         {
-          "src": "http://via.placeholder.com/200x200",
-          "title": "Place",
-          "alt": "Placeholder"
+          "src": "/assets/images/portfolio/portfolio_telenor.png",
+          "title": "Telenor Zrt.",
+          "alt": "Logo of Telenor"
         },
         {
-          "src": "http://via.placeholder.com/200x200",
-          "title": "Place",
-          "alt": "Placeholder"
+          "src": "/assets/images/portfolio/portfolio_czidro.jpg",
+          "title": "CziDro Bt.",
+          "alt": "Logo of CziDro Bt."
         }
       ]
     },
     "aboutme": {
       "title": "AdoutMe",
       "slogan": "Some of my resultss I'm proud of",
-      "banner": "",
-      "rows": [
+      "certificates": [
         {
-          "icon": "code",
+          "image": "/assets/images/badges/bluemix-essentials.png",
           "title": "Title1",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+          "text": "",
+          "provider":"IBM"
         },
         {
-          "icon": "drupal",
-          "title": "Title2",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+          "image": "/assets/images/badges/node-red-basics-to-bots.png",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
         },
         {
-          "icon": "pencil",
-          "title": "Title3",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+          "image": "/assets/images/badges/build-chatbots-with-watson-conversation.png",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
+        },
+        {
+          "image": "/assets/images/badges/enterprise-design-thinking-practitioner.png",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
+        },
+        {
+          "image": "/assets/images/badges/ibm-agile-explorer.png",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
+        },
+        {
+          "image": "/assets/images/badges/ibm-mentor.png",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
+        },
+        {
+          "image": "/assets/images/badges/html.jpg",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
         }
       ]
     },

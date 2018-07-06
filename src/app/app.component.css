@@ -10,9 +10,6 @@ header > .inner {
   text-align: center;
 }
 #profilpicture > figcaption{
-  position: absolute;
-  bottom: 20%;
-  left:50%;
-  margin-left: -50%;
-  z-index: +1;
+  margin-top: -10%;
+  z-index: 999;
 }

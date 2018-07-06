@@ -1,5 +1,231 @@
 {
   "header": {
-    "title" : "Ez az oldal címe!"
+    "title": "Bencs Balázs",
+    "carousel": [{
+        "slogan": "A sok tudás veszélyes, de a kevés is.",
+        "author": "Albert Einstein"
+      },
+      {
+        "slogan": "Every problems of the world could be settled easily, if men were only willig to think.",
+        "author": "Thomas J. Watson Jr."
+      }
+    ]
+  },
+  "navbar": {
+    "menu": [{
+        "title": "Home",
+        "link": "/home",
+        "scroll": ""
+      },
+      {
+        "title": "Blog",
+        "link": "/blog",
+        "scroll": ""
+      },
+      {
+        "title": "Rólam",
+        "link": "/home#services",
+        "scroll": "pageScroll"
+      },
+      {
+        "title": "Portfólió",
+        "link": "/home#portfolio",
+        "scroll": "pageScroll"
+      },
+      {
+        "title": "Kapcsolat",
+        "link": "/home#contactme",
+        "scroll": "pageScroll"
+      }
+    ],
+    "search": "Search"
+  },
+  "social": {
+    "text": "Find me on social networks as well!",
+    "icons": [{
+        "class": "fa-facebook-square",
+        "link": ""
+      },
+      {
+        "class": "fa-twitter-square",
+        "link": ""
+      },
+      {
+        "class": "fa-google-plus-square",
+        "link": ""
+      },
+      {
+        "class": "fa-linkedin",
+        "link": ""
+      },
+      {
+        "class": "fa-instagram",
+        "link": ""
+      },
+      {
+        "class": "fa-github",
+        "link": ""
+      }
+    ]
+  },
+  "footer": {
+    "desc": "Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "apps": {
+      "title": "Products",
+      "links": [{
+          "name": "E-learning site",
+          "link": ""
+        },
+        {
+          "name": "Content frame",
+          "link": ""
+        }
+      ]
+    },
+    "links": {
+      "title": "Links",
+      "links": [{
+        "name": "Old blog",
+        "link": ""
+      }]
+    },
+    "contact": {
+      "title": "Contact",
+      "links": [{
+          "icon": "home",
+          "link": "https://www.google.com/maps/place/Budapest,+M%C3%B3r+u.+14,+1135+Magyarorsz%C3%A1g/@47.5244039,19.08082,17z/data=!3m1!4b1!4m5!3m4!1s0x4741db90036ba625:0xf315f50b114f1c35!8m2!3d47.5244039!4d19.083014",
+          "text": "1135 Budapest, Mór utca 14/2, HU"
+        },
+        {
+          "icon": "envelope",
+          "link": "mailto:bencsbalazs@gmail.com",
+          "text": "bencsbalazs@gmail.com"
+        },
+        {
+          "icon": "slack",
+          "link": "",
+          "text": ""
+        },
+        {
+          "icon": "skype",
+          "link": "",
+          "text": ""
+        }
+      ]
+    }
+  },
+  "home": {
+    "services": {
+      "title": "Services",
+      "slogan": "",
+      "tiles": [{
+          "title": "Development",
+          "text": "Application development in AngularJS or Angular2-6."
+        },
+        {
+          "title": "E-learning",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+        },
+        {
+          "title": "Frameworks",
+          "text": "Well-proven, popular frameworks: Drupal, Moodle, Wordpress installation, design, plugin and feature development."
+        },
+        {
+          "title": "Agile",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+        },
+        {
+          "title": "Coaching",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+        },
+        {
+          "title": "Cloud",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "slogan": "View the story of my career."
+    },
+    "partners": {
+      "title": "Partners",
+      "slogan": "Some of my partners",
+      "images": [{
+          "src": "/assets/images/portfolio/portfolio_mav.jpg",
+          "title": "Máv-Start Zrt.",
+          "alt": "Máv logo"
+        },
+        {
+          "src": "/assets/images/portfolio/portfolio_gysev.jpg",
+          "title": "Győr-Sopron-Ebenfourth Vasúti Zrt.",
+          "alt": "GYSEV logo"
+        },
+        {
+          "src": "http://via.placeholder.com/200x200",
+          "title": "Place",
+          "alt": "Placeholder"
+        },
+        {
+          "src": "http://via.placeholder.com/200x200",
+          "title": "Place",
+          "alt": "Placeholder"
+        },
+        {
+          "src": "/assets/images/portfolio/portfolio_nebih.jpg",
+          "title": "Place",
+          "alt": "Placeholder"
+        },
+        {
+          "src": "/assets/images/portfolio/portfolio_raiffeisen.jpg",
+          "title": "Place",
+          "alt": "Placeholder"
+        },
+        {
+          "src": "http://via.placeholder.com/200x200",
+          "title": "Place",
+          "alt": "Placeholder"
+        },
+        {
+          "src": "http://via.placeholder.com/200x200",
+          "title": "Place",
+          "alt": "Placeholder"
+        }
+      ]
+    },
+    "aboutme": {
+      "title": "AdoutMe",
+      "slogan": "Some of my resultss I'm proud of",
+      "banner": "",
+      "rows": [
+        {
+          "icon": "code",
+          "title": "Title1",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+        },
+        {
+          "icon": "drupal",
+          "title": "Title2",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+        },
+        {
+          "icon": "pencil",
+          "title": "Title3",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Me",
+      "slogan": "If you find anything you interested about, write me a message.",
+      "form": {
+        "name": "Please enter your name",
+        "email": "Please enter your email",
+        "message": "The place of the message content",
+        "send": "Send",
+        "required": "The fields marked with * are required."
+      }
+    }
   }
 }
+
