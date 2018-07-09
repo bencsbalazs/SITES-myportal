@@ -25,7 +25,7 @@ import * as $ from 'jquery';
     </div>
   </div>
   `,
-  styles: ['']
+  styles: ['.card-body, .card-footer{display:none;} .card:hover .card-body, .card:hover .card-footer{display:block;}']
 })
 export class AboutmeComponent implements OnInit {
 
