@@ -240,6 +240,24 @@
           "title": "Title1",
           "text": "",
           "provider":"IBM"
+        },
+        {
+          "image": "/assets/images/badges/css.jpg",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
+        },
+        {
+          "image": "/assets/images/badges/sql.jpg",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
+        },
+        {
+          "image": "/assets/images/badges/javascript.jpg",
+          "title": "Title1",
+          "text": "",
+          "provider":"IBM"
         }
       ]
     },

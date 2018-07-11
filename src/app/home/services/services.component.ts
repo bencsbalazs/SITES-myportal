@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
       <small class="text-center">{{ 'home.services.slogan' | translate }}</small>
     </div>
   </div>
-  <div class="row">
+  <div class="row card-column">
   <div class="card col-4 my-3" *ngFor="let tile of ( 'home.services.tiles' | translate); let i=index">
-      <div class="card-header">{{tile.title}}</div>
+      <h2 class="heading">{{tile.title}}</h2>
       <div class="card-body">{{tile.text}}</div>
     </div>
   </div>`,

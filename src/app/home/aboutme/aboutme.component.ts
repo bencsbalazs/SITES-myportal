@@ -13,26 +13,25 @@ import * as $ from 'jquery';
   <div class="row">
     <div class="card-columns">
       <div class="card" *ngFor="let cert of ('home.aboutme.certificates' | translate)">
-        <img class="card-img-top" src="{{ cert.image }}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
+        <img class="card-img-top" src="{{ cert.image }}" alt="Card image cap" data-toggle="tooltip" data-placement="top" title="{{ cert.text }}">
         <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <small class="text-muted">Provider: {{ cert.provider }}</small>
         </div>
       </div>
     </div>
   </div>
   `,
-  styles: ['.card-body, .card-footer{display:none;} .card:hover .card-body, .card:hover .card-footer{display:block;}']
+  styles: ['']
 })
 export class AboutmeComponent implements OnInit {
 
-  constructor() {}
+  constructor() {
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  }
 
   ngOnInit() {
-
 
   }
 
