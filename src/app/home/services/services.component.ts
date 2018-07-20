@@ -4,13 +4,13 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <div class="row">
     <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
-      <h2 class="p-0">{{ 'home.services.title' | translate }}</h2>
+      <h2>{{ 'home.services.title' | translate }}</h2>
       <small class="text-center">{{ 'home.services.slogan' | translate }}</small>
     </div>
   </div>
   <div class="row card-column">
   <div class="card col-4 my-3" *ngFor="let tile of ( 'home.services.tiles' | translate); let i=index">
-      <h2 class="heading">{{tile.title}}</h2>
+      <h2 class="card-header">{{tile.title}}</h2>
       <div class="card-body">{{tile.text}}</div>
     </div>
   </div>`,

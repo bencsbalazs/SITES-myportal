@@ -13,11 +13,11 @@
     ]
   },
   "navbar": {
-    "title": "Example angular page",
+    "title": "Balazs Bencs' page",
     "menu": [{
         "title": "Home",
         "link": "/home",
-        "scroll": ""
+        "scroll": "pageScroll"
       },
       {
         "title": "Blog",
@@ -81,15 +81,16 @@
         {
           "name": "Content frame",
           "link": ""
+        },
+        {
+          "name": "Family tree",
+          "link": ""
+        },
+        {
+          "name": "Calculators",
+          "link": ""
         }
       ]
-    },
-    "links": {
-      "title": "Links",
-      "links": [{
-        "name": "Old blog",
-        "link": ""
-      }]
     },
     "contact": {
       "title": "Contact",
@@ -119,7 +120,7 @@
   "home": {
     "services": {
       "title": "Services",
-      "slogan": "",
+      "slogan": "These are my main activities.",
       "tiles": [{
           "title": "Development",
           "text": "Application development in AngularJS or Angular2-6."
@@ -201,14 +202,12 @@
       "certificates": [
         {
           "image": "/assets/images/badges/bluemix-essentials.png",
-          "title": "Title1",
-          "text": "",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id mattis sem, quis accumsan metus. Maecenas interdum magna sed felis lacinia, vitae accumsan dui sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam posuere vitae libero vel sodales.",
           "provider":"IBM"
         },
         {
           "image": "/assets/images/badges/node-red-basics-to-bots.png",
-          "title": "Title1",
-          "text": "",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id mattis sem, quis accumsan metus. Maecenas interdum magna sed felis lacinia, vitae accumsan dui sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam posuere vitae libero vel sodales.",
           "provider":"IBM"
         },
         {
@@ -237,8 +236,7 @@
         },
         {
           "image": "/assets/images/badges/html.jpg",
-          "title": "Title1",
-          "text": "",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id mattis sem, quis accumsan metus. Maecenas interdum magna sed felis lacinia, vitae accumsan dui sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam posuere vitae libero vel sodales.",
           "provider":"IBM"
         },
         {
