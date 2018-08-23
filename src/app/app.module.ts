@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { ROUTING } from './app-routing';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgStickyDirective } from 'ng-sticky';
@@ -15,7 +15,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonService } from './common.service';
 
 import { HomeComponent } from './home/home.component';
-import { BlogComponent } from './blog/blog.component';
+import { BlogComponent } from './blog/blog/blog.component';
+import { LoginComponent} from './blog/login/login.component';
 
 import { CarouselComponent } from './carousel/carousel.component';
 import { ServicesComponent } from './home/services/services.component';
@@ -29,6 +30,7 @@ import { PortfolioComponent } from './home/portfolio/portfolio.component';
     AppComponent,
     HomeComponent,
     BlogComponent,
+    LoginComponent,
     NgStickyDirective,
     CarouselComponent,
     ServicesComponent,
@@ -41,7 +43,7 @@ import { PortfolioComponent } from './home/portfolio/portfolio.component';
     BrowserModule,
     CommonModule,
     HttpClientModule,
-    AppRoutingModule,
+    ROUTING,
     NgwWowModule.forRoot(),
     NgbModule.forRoot(),
     TranslateModule.forRoot({

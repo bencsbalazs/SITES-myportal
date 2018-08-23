@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <div class="row">
     <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
       <h2>{{ 'home.partners.title' | translate }}</h2>
-      <small class="text-center">{{ 'home.partners.slogan' | translate }}</small>
+      <small class="description">{{ 'home.partners.slogan' | translate }}</small>
     </div>
   </div>
   <div class="row">

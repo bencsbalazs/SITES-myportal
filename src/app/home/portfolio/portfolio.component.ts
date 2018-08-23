@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `<div class="row">
   <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
     <h2>{{ 'home.portfolio.title' | translate }}</h2>
-    <small class="text-center">{{ 'home.portfolio.slogan' | translate }}</small>
+    <small class="description">{{ 'home.portfolio.slogan' | translate }}</small>
   </div>
   <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" style="background: #000;" src="" allowfullscreen="allowfullscreen"></iframe>
