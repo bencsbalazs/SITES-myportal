@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation, NgxGalleryImageSize } from 'ngx-gallery';
 
 @Component({
   selector: 'app-home-aboutme',
@@ -11,28 +11,81 @@ import * as $ from 'jquery';
     </div>
   </div>
   <div class="row">
-    <div class="card-columns">
-      <div class="card" *ngFor="let cert of ('home.aboutme.certificates' | translate)">
-        <img class="card-img-top" src="{{ cert.image }}" alt="Card image cap" data-toggle="tooltip" data-placement="top" title="{{ cert.text }}">
-        <div class="card-footer">
-          <small class="text-muted">Provider: {{ cert.provider }}</small>
-        </div>
-      </div>
-    </div>
+  <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
   </div>
   `,
   styles: ['']
 })
 export class AboutmeComponent implements OnInit {
-
-  constructor() {
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    });
-  }
-
-  ngOnInit() {
-
-  }
-
+    galleryOptions: NgxGalleryOptions[];
+    galleryImages: NgxGalleryImage[];
+    ngOnInit() {
+        this.galleryOptions = [
+            {
+                width: '100%',
+                height: '600px',
+                thumbnailsColumns: 6,
+                imageAnimation: NgxGalleryAnimation.Slide,
+                imageSize: NgxGalleryImageSize.Contain,
+                imageDescription: true,
+                imageInfinityMove: true,
+                imageAutoPlay: true,
+                imageAutoPlayInterval: 4000,
+                imageAutoPlayPauseOnHover: true,
+                thumbnailSize: NgxGalleryImageSize.Contain
+            },
+            {
+                breakpoint: 800,
+                width: '100%',
+                height: '600px',
+                imagePercent: 80,
+                thumbnailsPercent: 20,
+                thumbnailsMargin: 20,
+                thumbnailMargin: 20
+            },
+            {
+                breakpoint: 400,
+                preview: false
+            }
+        ];
+ 
+        this.galleryImages = [
+            {
+                small: '/assets/images/badges/bluemix-essentials.png',
+                medium: '/assets/images/badges/bluemix-essentials.png',
+                big: '/assets/images/badges/bluemix-essentials.png',
+                description: 'Lorem ipsum'
+            },
+            {
+                small: '/assets/images/badges/node-red-basics-to-bots.png',
+                medium: '/assets/images/badges/node-red-basics-to-bots.png',
+                big: '/assets/images/badges/node-red-basics-to-bots.png'
+            },
+            {
+                small: '/assets/images/badges/build-chatbots-with-watson-conversation.png',
+                medium: '/assets/images/badges/build-chatbots-with-watson-conversation.png',
+                big: '/assets/images/badges/build-chatbots-with-watson-conversation.png'
+            },
+            {
+                small: '/assets/images/badges/enterprise-design-thinking-practitioner.png',
+                medium: '/assets/images/badges/enterprise-design-thinking-practitioner.png',
+                big: '/assets/images/badges/enterprise-design-thinking-practitioner.png'
+            },
+            {
+                small: '/assets/images/badges/ibm-agile-explorer.png',
+                medium: '/assets/images/badges/ibm-agile-explorer.png',
+                big: '/assets/images/badges/ibm-agile-explorer.png'
+            },
+            {
+                small: '/assets/images/badges/ibm-mentor.png',
+                medium: '/assets/images/badges/ibm-mentor.png',
+                big: '/assets/images/badges/ibm-mentor.png'
+            },
+            {
+                small: '/assets/images/badges/html.jpg',
+                medium: '/assets/images/badges/html.jpg',
+                big: '/assets/images/badges/html.jpg'
+            }
+        ];
+    }
 }

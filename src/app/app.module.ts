@@ -8,6 +8,7 @@ import { ROUTING } from './app-routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgStickyDirective } from 'ng-sticky';
 import { NgwWowModule } from 'ngx-wow';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -44,6 +45,7 @@ import { PortfolioComponent } from './home/portfolio/portfolio.component';
     CommonModule,
     HttpClientModule,
     ROUTING,
+    NgxGalleryModule,
     NgwWowModule.forRoot(),
     NgbModule.forRoot(),
     TranslateModule.forRoot({
