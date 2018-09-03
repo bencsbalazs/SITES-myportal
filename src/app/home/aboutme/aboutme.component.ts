@@ -85,6 +85,26 @@ export class AboutmeComponent implements OnInit {
                 small: '/assets/images/badges/html.jpg',
                 medium: '/assets/images/badges/html.jpg',
                 big: '/assets/images/badges/html.jpg'
+            },
+            {
+                small: '/assets/images/badges/css.jpg',
+                medium: '/assets/images/badges/css.jpg',
+                big: '/assets/images/badges/css.jpg'
+            },
+            {
+                small: '/assets/images/badges/sql.jpg',
+                medium: '/assets/images/badges/sql.jpg',
+                big: '/assets/images/badges/sql.jpg'
+            },
+            {
+                small: '/assets/images/badges/javascript.jpg',
+                medium: '/assets/images/badges/javascript.jpg',
+                big: '/assets/images/badges/javascript.jpg'
+            },
+            {
+                small: '/assets/images/badges/php.jpg',
+                medium: '/assets/images/badges/php.jpg',
+                big: '/assets/images/badges/php.jpg'
             }
         ];
     }

@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
             <ul class="timeline">
               <li>
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="" alt="">
+                  <span class="fa fa-pencil"></span>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">

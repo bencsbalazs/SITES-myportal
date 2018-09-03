@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import $ from 'jquery';
 @Component({
   selector: 'app-home-contactme',
   template: `
@@ -10,35 +10,73 @@ import { Component, OnInit } from '@angular/core';
     </div>
   </div>
   <div class="row py-3">
-    <div class="col-md-6">
-      <div class="form-group">
-        <input id="form_name" type="text" name="name" class="form-control" placeholder="{{ 'home.contact.form.name' | translate }} *"
-          required="required" data-error="Firstname is required.">
-        <div class="help-block with-errors"></div>
+  <div class="col-md-9 mb-md-0 mb-5">
+  <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+      <div class="row py-4">
+          <div class="col-md-6">
+              <div class="md-form mb-0">
+                  <input type="text" id="name" name="name" class="form-control">
+                  <label for="name" class="">Your name</label>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="md-form mb-0">
+                  <input type="text" id="email" name="email" class="form-control">
+                  <label for="email" class="">Your email</label>
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <input id="form_email" type="email" name="email" class="form-control" placeholder="{{ 'home.contact.form.email' | translate }} *"
-          required="required" data-error="Valid email is required.">
-        <div class="help-block with-errors"></div>
+      <div class="row py-4">
+          <div class="col-md-12">
+              <div class="md-form mb-0">
+                  <input type="text" id="subject" name="subject" class="form-control">
+                  <label for="subject" class="">Subject</label>
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="col-md-12">
-      <div class="form-group">
-        <textarea id="form_message" name="message" class="form-control" placeholder="{{'home.contact.form.message' | translate}} *" rows="4" required="required"
-          data-error="Please,leave us a message."></textarea>
-        <div class="help-block with-errors"></div>
+      <div class="row py-4">
+          <div class="col-md-12">
+              <div class="md-form">
+                  <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                  <label for="message">Your message</label>
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="col-md-12">
-      <input type="submit" class="btn btn-success btn-send" value="{{'home.contact.form.send' | translate}}">
-      <span class="text-muted">{{'home.contact.form.required' | translate}}</span>
-    </div>
+  </form>
+  <div class="text-center text-md-left">
+      <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+  </div>
+  <div class="status"></div>
+</div>
+<div class="col-md-3 text-center">
+  <ul class="list-unstyled mb-0">
+      <li><i class="fa fa-map-marker fa-2x"></i>
+          <p>San Francisco, CA 94126, USA</p>
+      </li>
+
+      <li><i class="fa fa-phone mt-4 fa-2x"></i>
+          <p>+ 01 234 567 89</p>
+      </li>
+
+      <li><i class="fa fa-envelope mt-4 fa-2x"></i>
+          <p>contact@mdbootstrap.com</p>
+      </li>
+  </ul>
+</div>
   </div>`,
-  styles: ['#contactme input[type="text"],#contactme input[type="email"]{border: none;border-bottom: solid 0.2em #f00033;} #contactme input:focus{border: none;box-shadow: none;border-bottom: solid 0.2em #28a745;}']
+  styles: ['input {border:none;border-bottom: solid 1px #000;border-radius: 0%;}textarea {border: none;}label {position: absolute;top: .5em;}input:focus {border:none;border-bottom: solid #0ff 2px;box-shadow: 0 0 0em;}input:focus + label, textarea:focus + label, input.filled + label, textarea.filled + label{top: -1.5em;}']
 })
 export class ContactmeComponent implements OnInit {
   constructor() { }
-  ngOnInit() {}
+  ngOnInit() {
+    $("input, textarea").on("change paste", function(){
+        if ($(this).val()){
+            $(this).addClass("filled");
+        } else {
+            $(this).removeClass("filled");
+        }
+        
+    });  
+  }
+  
 }

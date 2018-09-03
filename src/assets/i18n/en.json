@@ -188,76 +188,12 @@
           "src": "/assets/images/portfolio/portfolio_telenor.png",
           "title": "Telenor Zrt.",
           "alt": "Logo of Telenor"
-        },
-        {
-          "src": "/assets/images/portfolio/portfolio_czidro.jpg",
-          "title": "CziDro Bt.",
-          "alt": "Logo of CziDro Bt."
         }
       ]
     },
     "aboutme": {
       "title": "AboutMe",
-      "slogan": "Some of my resultss I'm proud of",
-      "certificates": [
-        {
-          "image": "/assets/images/badges/bluemix-essentials.png",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id mattis sem, quis accumsan metus. Maecenas interdum magna sed felis lacinia, vitae accumsan dui sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam posuere vitae libero vel sodales.",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/node-red-basics-to-bots.png",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id mattis sem, quis accumsan metus. Maecenas interdum magna sed felis lacinia, vitae accumsan dui sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam posuere vitae libero vel sodales.",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/build-chatbots-with-watson-conversation.png",
-          "title": "Title1",
-          "text": "",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/enterprise-design-thinking-practitioner.png",
-          "title": "Title1",
-          "text": "",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/ibm-agile-explorer.png",
-          "title": "Title1",
-          "text": "",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/ibm-mentor.png",
-          "title": "Title1",
-          "text": "",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/html.jpg",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id mattis sem, quis accumsan metus. Maecenas interdum magna sed felis lacinia, vitae accumsan dui sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam posuere vitae libero vel sodales.",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/css.jpg",
-          "title": "Title1",
-          "text": "",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/sql.jpg",
-          "title": "Title1",
-          "text": "",
-          "provider":"IBM"
-        },
-        {
-          "image": "/assets/images/badges/javascript.jpg",
-          "title": "Title1",
-          "text": "",
-          "provider":"IBM"
-        }
-      ]
+      "slogan": "Some of my resultss I'm proud of"
     },
     "contact": {
       "title": "Contact Me",
