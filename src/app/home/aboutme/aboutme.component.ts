@@ -54,7 +54,9 @@ export class AboutmeComponent implements OnInit {
                 small: '/assets/images/badges/bluemix-essentials.png',
                 medium: '/assets/images/badges/bluemix-essentials.png',
                 big: '/assets/images/badges/bluemix-essentials.png',
-                description: 'Lorem ipsum'
+                description: 'This badge holder has a understanding of the essentials of IBM Cloud. Through an online course they have learned about the IBM Cloud platform and gained hands-on experience using the Cloud Foundry command-line interface and the IBM Eclipse tools for IBM Cloud. The badge earner has used these tools to deploy and modify basic applications using a managed service in IBM Cloud.',
+                url: 'https://www.youracclaim.com/badges/b56295bf-abed-48b6-a04e-6c3e69da8bca',
+                label: 'IBM Cloud Essentials'
             },
             {
                 small: '/assets/images/badges/node-red-basics-to-bots.png',
@@ -74,7 +76,9 @@ export class AboutmeComponent implements OnInit {
             {
                 small: '/assets/images/badges/ibm-agile-explorer.png',
                 medium: '/assets/images/badges/ibm-agile-explorer.png',
-                big: '/assets/images/badges/ibm-agile-explorer.png'
+                big: '/assets/images/badges/ibm-agile-explorer.png',
+                description: 'The Agile Explorer has a foundational understanding of Agile values, principles, and practices that allows them to initiate an Agile conversation with co-workers and colleagues.',
+                url: 'https://www.youracclaim.com/badges/2e9d7b8c-5d79-4bdf-9df5-7349dafefed8'
             },
             {
                 small: '/assets/images/badges/ibm-mentor.png',

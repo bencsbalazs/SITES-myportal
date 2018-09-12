@@ -25,6 +25,7 @@ import { PartnersComponent } from './home/partners/partners.component';
 import { ContactmeComponent } from './home/contactme/contactme.component';
 import { AboutmeComponent } from './home/aboutme/aboutme.component';
 import { PortfolioComponent } from './home/portfolio/portfolio.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { PortfolioComponent } from './home/portfolio/portfolio.component';
   imports: [
     BrowserModule,
     CommonModule,
+    FormsModule,
     HttpClientModule,
     ROUTING,
     NgxGalleryModule,

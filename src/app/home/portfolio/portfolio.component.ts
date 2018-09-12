@@ -25,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="" alt="">
+                  <h4 class="fa fa-pencil"></h4>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">

@@ -1,26 +1,33 @@
 import { Component } from '@angular/core';
 import { LoginService } from './login.service';
 import { User } from '../models/user.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   template: `
+  <div class="col-4 offset-4">
      <h2 class="form-signin-heading">Please sign in</h2>
-     <label for="inputEmail" class="sr-only">Email address</label>
-        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-	<button class="btn btn-lg btn-primary btn-block" (click)="validateLogin();" type="button">Sign in</button>
+     <form>
+     <div class="form-group">
+        <label for="username">Email address</label>
+        <input type="email" class="form-control" id="username" [(ngModel)]="user.username" name="username" placeholder="Username" required autofocus>
+     </div>
+     <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" placeholder="Password" required>
+     </div>
+    <button class="btn btn-lg btn-primary btn-block" (click)="validateLogin();" type="button">Sign in</button>
+    </form>
+    </div>
   `,
   styleUrls: ['./login.component.css'],
   providers: [ LoginService ]
 })
 export class LoginComponent {
+    onSubmit(f: NgForm){
+        console.log(f.value);
+    }
 
   public user : User;
 
@@ -29,14 +36,14 @@ export class LoginComponent {
   }
 
   validateLogin() {
-  	if(this.user.username && this.user.password) {
+  	if(this.user.username) {
   		this.loginService.validateLogin(this.user).subscribe(result => {
         console.log('result is ', result);
       }, error => {
-        console.log('error is ', error);
+        console.log('Error is: ', error);
       });
   	} else {
-  		alert('enter user name and password');
+  		alert('Enter your username and password!');
   	}
   }
 

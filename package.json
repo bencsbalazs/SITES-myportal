@@ -42,6 +42,7 @@
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
     "mdbootstrap": "^4.5.4",
+    "meow-blog": "^0.1.9",
     "mongodb": "^3.1.0-beta4",
     "mongoose": "^5.2.9",
     "ng-sticky": "^0.1.5",
