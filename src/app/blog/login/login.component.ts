@@ -6,6 +6,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-login',
   template: `
+  <div class="row">
   <div class="col-4 offset-4">
      <h2 class="form-signin-heading">Please sign in</h2>
      <form>
@@ -19,6 +20,7 @@ import { NgForm } from '@angular/forms';
      </div>
     <button class="btn btn-lg btn-primary btn-block" (click)="validateLogin();" type="button">Sign in</button>
     </form>
+    </div>
     </div>
   `,
   styleUrls: ['./login.component.css'],

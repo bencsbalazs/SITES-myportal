@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
       <div class="card-body text-justify">{{tile.text}}</div>
     </div>
   </div>`,
-  styles: ['.card{transition: ease-in-out 500;transform:scale(0.95);}.card:hover{box-shadow: 0 0 1em #ccc inset, 0 0 1em #000;z-index:999;}']
+  styles: ['.card{transition: ease-in-out 500;transform:scale(0.95);}.card:hover{box-shadow: 0 0 1em #ccc inset, 0 0 1em rgb(35,140,70);z-index:999;}']
 })
 export class ServicesComponent implements OnInit {
   constructor(){}

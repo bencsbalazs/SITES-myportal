@@ -45,14 +45,17 @@
   "social": {
     "text": "Find me on social networks as well!",
     "icons": [{
+        "name": "Facebook",
         "class": "fa-facebook-square",
         "link": "https://www.facebook.com/balazs.bencs.9"
       },
       {
+        "name": "Twitter",  
         "class": "fa-twitter-square",
         "link": ""
       },
       {
+          "name": "Google+",
         "class": "fa-google-plus-square",
         "link": ""
       },

@@ -1,13 +1,6 @@
-.is-sticky{
-    width: 100%;
-    z-index: 999;
-}
-header > .inner {
-  position: absolute;
-  top: 25%;
-  left: 20%;
-  right: 20%;
-  text-align: center;
+#profilpicture img {
+    border: .25em solid rgb(35,140,70);
+    box-shadow: 0 0 .5em rgb(0,0,0);
 }
 #profilpicture > figcaption{
   margin-top: -10%;

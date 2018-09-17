@@ -18,6 +18,7 @@ import { CommonService } from './common.service';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog/blog.component';
 import { LoginComponent} from './blog/login/login.component';
+import { NewPostComponent } from './blog/newpost/newpost.component';
 
 import { CarouselComponent } from './carousel/carousel.component';
 import { ServicesComponent } from './home/services/services.component';
@@ -33,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     BlogComponent,
     LoginComponent,
+    NewPostComponent,
     NgStickyDirective,
     CarouselComponent,
     ServicesComponent,
