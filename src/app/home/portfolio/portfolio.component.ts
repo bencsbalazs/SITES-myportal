@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as data from '../../../assets/i18n/en.json';
 @Component({
   selector: 'app-home-portfolio',
   template: `
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   </div>
   <div class="col-lg-12">
             <ul class="timeline">
-              <li ng-class-odd="timeline-inverted" *ngFor="let step of ('home.potfolio.steps' | translate)">
+              <li *ngFor="let step of ('home.potfolio.steps' | translate)">
                 <div class="timeline-image">
                   <span class='fa fa-{{ step.icon }}'></span>
                 </div>
@@ -32,7 +32,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

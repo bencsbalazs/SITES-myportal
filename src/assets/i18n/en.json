@@ -153,7 +153,7 @@
     "portfolio": {
       "title": "Portfolio",
       "slogan": "View the story of my career.",
-      "steps" :[{
+      "steps": [{
               "title": "Lorem ipsum dolor sit amet",
               "icon": "book",
               "date": "Lorem ipsum",
