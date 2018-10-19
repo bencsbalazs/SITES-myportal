@@ -4,6 +4,7 @@ import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation, NgxGalleryImag
 @Component({
   selector: 'app-home-aboutme',
   template: `
+  <div class="container">
   <div class="row">
     <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
       <h2>{{ 'home.aboutme.title' | translate }}</h2>
@@ -12,6 +13,7 @@ import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation, NgxGalleryImag
   </div>
   <div class="row">
   <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+  </div>
   </div>
   `,
   styles: ['']

@@ -152,7 +152,26 @@
     },
     "portfolio": {
       "title": "Portfolio",
-      "slogan": "View the story of my career."
+      "slogan": "View the story of my career.",
+      "steps" :[{
+              "title": "Lorem ipsum dolor sit amet",
+              "icon": "book",
+              "date": "Lorem ipsum",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+          },
+          {
+            "title": "Lorem ipsum dolor sit amet",
+            "icon": "book",
+            "date": "Lorem ipsum",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+        },
+        {
+            "title": "Lorem ipsum dolor sit amet",
+            "icon": "book",
+            "date": "Lorem ipsum",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+        }
+      ]
     },
     "partners": {
       "title": "Partners",
@@ -186,11 +205,6 @@
           "src": "/assets/images/portfolio/portfolio_raiffeisen.jpg",
           "title": "Raiffeisen Bank Zrt.",
           "alt": "Logo of Raiffeisen"
-        },
-        {
-          "src": "/assets/images/portfolio/portfolio_telenor.png",
-          "title": "Telenor Zrt.",
-          "alt": "Logo of Telenor"
         }
       ]
     },

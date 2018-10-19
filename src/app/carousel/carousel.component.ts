@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import $ from 'jquery';
 
 import * as data from '../../assets/i18n/en.json';
 
@@ -16,20 +17,33 @@ import * as data from '../../assets/i18n/en.json';
     </div>
   </ng-template>
 </ngb-carousel>`,
-  styles: ['.carousel img {width: 100%;height: 100%;}']
+  styles: ['.carousel{position:fixed;width: 100%;height: 100%;z-index:0}.carousel div{position:absolute;}.carousel img {width: 100%;height: 100%;}']
 })
 export class CarouselComponent implements OnInit {
   images: Array<string>;
   slides = (<any>data).header.carousel.length;
+  list = [];
+  i=1;
   constructor(private _http: HttpClient) { }
   ngOnInit() {
-    console.log(this.slides);
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos == currentScrollPos) {
+            $(".carousel-caption").css("display","block");
+        } else {
+            $(".carousel-caption").css("display","none");
+            
+        }
+    }
+    while(this.list.push(this.i++)<=this.slides) {}  
     this._http.get('https://picsum.photos/list')
       .pipe(map((images: Array<{ id: number }>) => this._randomImageUrls(images)))
       .subscribe(images => this.images = images);
   }
   private _randomImageUrls(images: Array<{ id: number }>): Array<string> {
-    return [1,2].map(() => {
+    return this.list.map(() => {
       const randomId = images[Math.floor(Math.random() * images.length)].id;
       return `https://picsum.photos/900/500?image=${randomId}`;
     });

@@ -3,6 +3,7 @@ import $ from 'jquery';
 @Component({
   selector: 'app-home-contactme',
   template: `
+  <div class="container">
   <div class="row">
     <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
       <h2>{{ 'home.contact.title' | translate }}</h2>
@@ -63,6 +64,7 @@ import $ from 'jquery';
       </li>
   </ul>
 </div>
+  </div>
   </div>`,
   styles: ['input {border:none;border-bottom: solid 1px #000;border-radius: 0%;}textarea {border: none;}label {position: absolute;top: .5em;}input:focus {border:none;border-bottom: solid #0ff 2px;box-shadow: 0 0 0em;}input:focus + label, textarea:focus + label, input.filled + label, textarea.filled + label{top: -1.5em;}']
 })

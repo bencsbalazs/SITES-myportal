@@ -13,12 +13,10 @@
     transition: linear 1s;
     transform: scale(.8);
     text-align: center;
-    visibility: hidden;
 }
 
 .card:hover > h2, .card:hover > div {
     transform: scale(1);
-    visibility: visible;
 }
 
 .card:hover {
