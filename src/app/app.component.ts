@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { NavigationEnd } from '@angular/router';
 import { NgwWowService } from 'ngx-wow';
 import { Subscription }   from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
@@ -12,11 +12,8 @@ import 'rxjs/add/operator/filter';
 })
 export class AppComponent implements OnInit, OnDestroy {
   private wowSubscription: Subscription;
-  constructor(private router: Router, private wowService: NgwWowService, private translate: TranslateService) {
+  constructor(private wowService: NgwWowService, private translate: TranslateService) {
     translate.setDefaultLang('en');
-    this.router.events.filter(event => event instanceof NavigationEnd).subscribe(event => {
-      this.wowService.init();
-    });
   }
   switchLanguage(language: string) {
     this.translate.use(language);

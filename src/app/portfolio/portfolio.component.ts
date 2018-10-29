@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../../../assets/i18n/en.json';
 @Component({
   selector: 'app-home-portfolio',
   template: `
@@ -10,9 +9,9 @@ import * as data from '../../../assets/i18n/en.json';
   </div>
   <div class="col-lg-12">
             <ul class="timeline">
-              <li *ngFor="let step of ('home.potfolio.steps' | translate)">
+              <li *ngFor="let step of ( 'home.portfolio.steps' | translate ); let i=index; let even=even;" [class.even]="even">
                 <div class="timeline-image">
-                  <span class='fa fa-{{ step.icon }}'></span>
+                  <span class='fa fa-{{ step.icon }} fa-3x'></span>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">

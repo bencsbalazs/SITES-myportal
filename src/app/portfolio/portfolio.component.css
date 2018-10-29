@@ -18,7 +18,7 @@
 .timeline>li {
     position: relative;
     min-height: 50px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
 }
 
 .timeline>li:after, .timeline>li:before {
@@ -35,7 +35,8 @@
     float: right;
     width: 100%;
     padding: 0 20px 0 100px;
-    text-align: left
+    text-align: left;
+    background: rgba(255,255,255,.8);
 }
 
 .timeline>li .timeline-panel:before {
@@ -74,20 +75,20 @@
     font-size: 4rem
 }
 
-.timeline>li.timeline-inverted>.timeline-panel {
+.timeline>li.even>.timeline-panel {
     float: right;
     padding: 0 20px 0 100px;
     text-align: left
 }
 
-.timeline>li.timeline-inverted>.timeline-panel:before {
+.timeline>li.even>.timeline-panel:before {
     right: auto;
     left: -15px;
     border-right-width: 15px;
     border-left-width: 0
 }
 
-.timeline>li.timeline-inverted>.timeline-panel:after {
+.timeline>li.even>.timeline-panel:after {
     right: auto;
     left: -14px;
     border-right-width: 14px;
@@ -135,7 +136,7 @@
         margin: auto;
         font-size: 4rem
     }
-    .timeline>li.timeline-inverted>.timeline-panel {
+    .timeline>li.even>.timeline-panel {
         float: right;
         padding: 0 30px 20px 20px;
         text-align: left
@@ -158,7 +159,7 @@
         margin: auto;
         font-size: 4rem
     }
-    .timeline>li.timeline-inverted>.timeline-panel {
+    .timeline>li.even>.timeline-panel {
         padding: 0 20px 20px
     }
 }
@@ -179,7 +180,7 @@
         margin: auto;
         font-size: 4rem
     }
-    .timeline>li.timeline-inverted>.timeline-panel {
+    .timeline>li.even>.timeline-panel {
         padding: 0 100px 20px 20px
     }
 }
