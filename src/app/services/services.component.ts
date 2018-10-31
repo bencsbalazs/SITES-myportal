@@ -5,6 +5,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['services.components.css']
 })
 export class ServicesComponent implements OnInit {
-  constructor(){}
-  ngOnInit(){}
+  constructor() {}
+  ngOnInit() {}
 }

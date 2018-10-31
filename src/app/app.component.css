@@ -1,8 +1,12 @@
 #profilpicture img {
-    border: .25em solid rgb(35,140,70);
+    border: .25em solid rgb(255,255,255);
     box-shadow: 0 0 .5em rgb(0,0,0);
 }
 #profilpicture > figcaption{
   margin-top: -10%;
   z-index: 999;
+}
+
+#services {
+    background: rgba(255,255,255,.7);
 }

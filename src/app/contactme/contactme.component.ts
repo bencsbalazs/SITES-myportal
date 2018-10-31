@@ -66,19 +66,18 @@ import $ from 'jquery';
 </div>
   </div>
   </div>`,
+  // tslint:disable-next-line:max-line-length
   styles: ['input {border:none;border-bottom: solid 1px #000;border-radius: 0%;}textarea {border: none;}label {position: absolute;top: .5em;}input:focus {border:none;border-bottom: solid #0ff 2px;box-shadow: 0 0 0em;}input:focus + label, textarea:focus + label, input.filled + label, textarea.filled + label{top: -1.5em;}']
 })
 export class ContactmeComponent implements OnInit {
   constructor() { }
   ngOnInit() {
-    $("input, textarea").on("change paste", function(){
-        if ($(this).val()){
-            $(this).addClass("filled");
+    $('input, textarea').on('change paste', function() {
+        if ($(this).val()) {
+            $(this).addClass('filled');
         } else {
-            $(this).removeClass("filled");
+            $(this).removeClass('filled');
         }
-        
-    });  
+    });
   }
-  
 }
