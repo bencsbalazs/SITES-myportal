@@ -21,8 +21,8 @@
       },
       {
         "title": "Blog",
-        "link": "/blog",
-        "scroll": ""
+        "link": "/home#blog",
+        "scroll": "pageScroll"
       },
       {
         "title": "About Me",
@@ -50,7 +50,7 @@
         "link": "https://www.facebook.com/balazs.bencs.9"
       },
       {
-        "name": "Twitter",  
+        "name": "Twitter",
         "class": "fa-twitter-square",
         "link": ""
       },
@@ -192,7 +192,7 @@
           "alt": "Moodle logo"
         },
         {
-          "src": "/assets/images/portfolio/portfolio_ibm.jpg",
+          "src": "/assets/images/portfolio/portfolio_ibm.png",
           "title": "IBM ISSC Hungary Kft.",
           "alt": "IBM logo"
         },

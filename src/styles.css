@@ -7,7 +7,7 @@ html,body,header,.view {height: 100%;}
 header > .inner {z-index: 999;}
 .affix {position: fixed;top: 0;width: 100%;z-index: 9999 !important;}
 .is-sticky{width: 100%;z-index: 999;}
-
+section {overflow-x: hidden;}
 header > .inner {
   position: absolute;
   top: 25%;
@@ -22,20 +22,28 @@ header > .inner {
 .carousel-item.active {
     height: 100%;
 }
-
-/* Custom fonts */
-.main-title {
-  letter-spacing: .1em;
-  -webkit-text-stroke: 1px black;
-  color: white;
-  text-shadow:
-    3px 3px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+.separator {
+  width: 70%;
+  height: .5em;
+  box-shadow: 0 0 .5em #fff;
+  border-radius: 50%;
+  background-color: black;
 }
-.row > div > h2, .small{
-  font-style: italic;
-  font-family: serif;
+/* Custom fonts */
+.row > div > small, .main-title, .row > div > h2{
+  letter-spacing: .3em;
+    font-family: sans-serif;
+    font-style: italic;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.main-title {
+  font-size: 4rem;
+}
+.row > div > h2 {
+  font-size: 3rem;
+}
+.row > div > small {
+  font-size: 2rem;
 }

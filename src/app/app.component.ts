@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { NavigationEnd } from '@angular/router';
 import { NgwWowService } from 'ngx-wow';
-import { Subscription }   from 'rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
 
 @Component({
@@ -21,7 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
 
     this.wowSubscription = this.wowService.itemRevealed$.subscribe(
-      (item:HTMLElement) => {
+      (item: HTMLElement) => {
       });
   }
   ngOnDestroy() {

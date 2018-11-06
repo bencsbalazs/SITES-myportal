@@ -7,12 +7,13 @@ import $ from 'jquery';
   <div class="row">
     <div class="col-12 mx-sm-auto my-sm-5 my-md-5 my-lg-5 text-center">
       <h2>{{ 'home.contact.title' | translate }}</h2>
+      <hr class="separator">
       <small class="description">{{ 'home.contact.slogan' | translate }}</small>
     </div>
   </div>
   <div class="row py-3">
   <div class="col-md-9 mb-md-0 mb-5">
-  <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+  <form id="contact-form" name="contact-form" action="" method="POST">
       <div class="row py-4">
           <div class="col-md-6">
               <div class="md-form mb-0">
