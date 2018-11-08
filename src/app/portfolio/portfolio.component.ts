@@ -9,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
   </div>
   <div class="col-lg-12">
             <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <h4 class='fa fa-book'></h4>
+                </div>
+              </li>
               <li *ngFor="let step of ( 'home.portfolio.steps' | translate ); let i=index; let even=even;" [class.even]="even">
                 <div class="timeline-image">
-                  <span class='fa fa-{{ step.icon }} fa-3x'></span>
+                  <h4 class='fa fa-{{ step.icon }}'></h4>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -23,7 +28,11 @@ import { Component, OnInit } from '@angular/core';
                   </div>
                 </div>
               </li>
-              
+              <li>
+                <div class="timeline-image">
+                  <h4 class='fa fa-book'></h4>
+                </div>
+              </li>
             </ul>
 </div>
 </div>`,

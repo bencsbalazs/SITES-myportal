@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import $ from 'jquery';
-
 import * as data from '../../assets/i18n/en.json';
-
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-carousel',
   template: `
@@ -18,25 +17,20 @@ import * as data from '../../assets/i18n/en.json';
   </ng-template>
 </ngb-carousel>`,
   // tslint:disable-next-line:max-line-length
-  styles: ['.carousel{position:fixed;width: 100%;height: 100%;z-index:-1}.carousel div{position:absolute;}.carousel img {width: 100%;height: 100%;}']
+  styles: ['.carousel{position:fixed;width: 100%;height: 100%;z-index:-1}.carousel div{position:absolute;}.carousel img {width: 100%;height: 100%;} .carousel-control { display: none; visibility: hidden;}']
 })
 export class CarouselComponent implements OnInit {
   images: Array<string>;
   slides = (<any>data).header.carousel.length;
   list = [];
   i = 1;
-  constructor(private _http: HttpClient) { }
+  prevScrollPos = window.innerHeight * 0.1;
+  constructor(config: NgbCarouselConfig, private _http: HttpClient) {
+    config.showNavigationArrows = false;
+    config.showNavigationIndicators = false;
+  }
   ngOnInit() {
-
-    const prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      const currentScrollPos = window.pageYOffset;
-      if (prevScrollpos === currentScrollPos) {
-        $('.carousel-caption').css('display', 'block');
-      } else {
-        $('.carousel-caption').css('display', 'none');
-      }
-    };
+    window.onload = window.onscroll = this.sloganToggle;
     while (this.list.push(this.i++) <= this.slides) { }
     this._http.get('https://picsum.photos/list')
       .pipe(map((images: Array<{ id: number }>) => this._randomImageUrls(images)))
@@ -47,5 +41,14 @@ export class CarouselComponent implements OnInit {
       const randomId = images[Math.floor(Math.random() * images.length)].id;
       return `https://picsum.photos/900/500?image=${randomId}`;
     });
+  }
+  private sloganToggle = () => {
+    const currentScrollPos = window.pageYOffset;
+    console.log(currentScrollPos);
+      if (this.prevScrollPos >= currentScrollPos) {
+        $('.carousel-caption').css('display', 'block');
+      } else {
+        $('.carousel-caption').css('display', 'none');
+      }
   }
 }

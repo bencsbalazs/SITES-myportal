@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
       <small class="description">{{ 'home.partners.slogan' | translate }}</small>
     </div>
   </div>
-  <div class="row">
+  <div class="row bgc-white">
     <div class="col-2 text-center partner" *ngFor="let partner of ('home.partners.images' | translate)">
       <img src="{{ partner.src }}" alt="" title="">
     </div>
   </div>`,
   // tslint:disable-next-line:max-line-length
-  styles: ['#partners{background-color: rgba(255,255,255,.8;)} .partner{filter: grayscale(100%);height:150px;}.partner img{display: block;width:100%;height:100%;object-fit: contain;overflow: hidden;}']
+  styles: ['.partner{filter: grayscale(100%);height:150px;}.partner img{display: block;opacity:0.8;width:100%;height:100%;object-fit: contain;overflow: hidden;}']
 })
 export class PartnersComponent implements OnInit {
   constructor() { }

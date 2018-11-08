@@ -15,7 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonService } from './common.service';
 
 import { BlogComponent } from './blog/blog/blog.component';
-import { LoginComponent} from './blog/login/login.component';
+import { LoginComponent } from './blog/login/login.component';
 import { NewPostComponent } from './blog/newpost/newpost.component';
 
 import { CarouselComponent } from './carousel/carousel.component';

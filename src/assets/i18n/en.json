@@ -2,7 +2,8 @@
   "header": {
     "title": "Balazs Bencs",
     "image": "/assets/images/me.jpeg",
-    "carousel": [{
+    "carousel": [
+      {
         "slogan": "A lot of knowledge is a dangerous thing, but so is a few.",
         "author": "Albert Einstein"
       },
@@ -14,7 +15,8 @@
   },
   "navbar": {
     "title": "Balazs Bencs' page",
-    "menu": [{
+    "menu": [
+      {
         "title": "Home",
         "link": "/home",
         "scroll": "pageScroll"
@@ -44,7 +46,8 @@
   },
   "social": {
     "text": "Find me on social networks as well!",
-    "icons": [{
+    "icons": [
+      {
         "name": "Facebook",
         "class": "fa-facebook-square",
         "link": "https://www.facebook.com/balazs.bencs.9"
@@ -55,7 +58,7 @@
         "link": ""
       },
       {
-          "name": "Google+",
+        "name": "Google+",
         "class": "fa-google-plus-square",
         "link": ""
       },
@@ -77,45 +80,37 @@
     "desc": "Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     "apps": {
       "title": "Products",
-      "links": [{
-          "name": "E-learning site",
+      "links": [
+        {
+          "name": "Moodle portal",
           "link": ""
         },
         {
-          "name": "Content frame",
+          "name": "Drupal site",
           "link": ""
         },
         {
-          "name": "Family tree",
+          "name": "Wordpress blog",
           "link": ""
         },
         {
-          "name": "Calculators",
+          "name": "Blogger profile",
           "link": ""
         }
       ]
     },
     "contact": {
       "title": "Contact",
-      "links": [{
-          "icon": "home",
-          "link": "https://www.google.com/maps/place/Budapest,+M%C3%B3r+u.+14,+1135+Magyarorsz%C3%A1g/@47.5244039,19.08082,17z/data=!3m1!4b1!4m5!3m4!1s0x4741db90036ba625:0xf315f50b114f1c35!8m2!3d47.5244039!4d19.083014",
-          "text": "1135 Budapest, Mór utca 14/2, HU"
+      "links": [
+        {
+          "icon": "map-marker",
+          "link": "",
+          "text": ""
         },
         {
           "icon": "envelope",
-          "link": "mailto:bencsbalazs@gmail.com",
-          "text": "bencsbalazs@gmail.com"
-        },
-        {
-          "icon": "slack",
           "link": "",
-          "text": "balazs.bencs@ibm.com"
-        },
-        {
-          "icon": "skype",
-          "link": "",
-          "text": "bencsbalazs"
+          "text": ""
         }
       ]
     }
@@ -124,7 +119,8 @@
     "services": {
       "title": "Services",
       "slogan": "These are my main activities.",
-      "tiles": [{
+      "tiles": [
+        {
           "title": "Development",
           "text": "Application development in AngularJS or Angular2-6."
         },
@@ -153,30 +149,32 @@
     "portfolio": {
       "title": "Portfolio",
       "slogan": "View the story of my career.",
-      "steps": [{
-              "title": "Lorem ipsum dolor sit amet",
-              "icon": "book",
-              "date": "Lorem ipsum",
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
-          },
-          {
-            "title": "Lorem ipsum dolor sit amet",
-            "icon": "book",
-            "date": "Lorem ipsum",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+      "steps": [
+        {
+          "title": "Lorem ipsum dolor sit amet",
+          "icon": "book",
+          "date": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
         },
         {
-            "title": "Lorem ipsum dolor sit amet",
-            "icon": "book",
-            "date": "Lorem ipsum",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+          "title": "Lorem ipsum dolor sit amet",
+          "icon": "book",
+          "date": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+        },
+        {
+          "title": "Lorem ipsum dolor sit amet",
+          "icon": "book",
+          "date": "Lorem ipsum",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
         }
       ]
     },
     "partners": {
       "title": "Partners",
       "slogan": "Some of my partners",
-      "images": [{
+      "images": [
+        {
           "src": "/assets/images/portfolio/portfolio_mav.jpg",
           "title": "Máv-Start Zrt.",
           "alt": "Máv logo"
@@ -215,9 +213,27 @@
     "contact": {
       "title": "Contact Me",
       "slogan": "If you find anything you interested about, write me a message.",
+      "links": [
+        {
+          "icon": "map-marker",
+          "link": "https://www.google.com/maps/place/Budapest,+M%C3%B3r+u.+14,+1135+Magyarorsz%C3%A1g/@47.5244039,19.08082,17z/data=!3m1!4b1!4m5!3m4!1s0x4741db90036ba625:0xf315f50b114f1c35!8m2!3d47.5244039!4d19.083014",
+          "text": "1135 Budapest, Mór utca 14/2, HU"
+        },
+        {
+          "icon": "envelope",
+          "link": "mailto:bencsbalazs@gmail.com",
+          "text": "bencsbalazs@gmail.com"
+        },
+        {
+          "icon": "slack",
+          "link": "",
+          "text": "balazs.bencs@ibm.com"
+        }
+      ],
       "form": {
-        "name": "Please enter your name",
-        "email": "Please enter your email",
+        "name": "Your name",
+        "email": "Your email",
+        "subject": "Subject",
         "message": "The place of the message content",
         "send": "Send",
         "required": "The fields marked with * are required."
@@ -225,4 +241,3 @@
     }
   }
 }
-

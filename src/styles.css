@@ -30,7 +30,7 @@ header > .inner {
   background-color: black;
 }
 /* Custom fonts */
-.row > div > small, .main-title, .row > div > h2{
+.row > div > small, .main-title, .row > div > h2, .carousel-caption h3,.carousel-caption p{
   letter-spacing: .3em;
     font-family: sans-serif;
     font-style: italic;
@@ -46,4 +46,10 @@ header > .inner {
 }
 .row > div > small {
   font-size: 2rem;
+}
+.carousel-caption p {
+  font-size: 1.5rem;
+}
+.bgc-white {
+  background: rgba(255,255,255,0.8);
 }

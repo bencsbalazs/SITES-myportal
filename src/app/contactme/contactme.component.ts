@@ -18,13 +18,13 @@ import $ from 'jquery';
           <div class="col-md-6">
               <div class="md-form mb-0">
                   <input type="text" id="name" name="name" class="form-control">
-                  <label for="name" class="">Your name</label>
+                  <label for="name" class="">{{ 'home.contact.form.name' | translate }}</label>
               </div>
           </div>
           <div class="col-md-6">
               <div class="md-form mb-0">
                   <input type="text" id="email" name="email" class="form-control">
-                  <label for="email" class="">Your email</label>
+                  <label for="email" class="">{{ 'home.contact.form.email' | translate }}</label>
               </div>
           </div>
       </div>
@@ -32,7 +32,7 @@ import $ from 'jquery';
           <div class="col-md-12">
               <div class="md-form mb-0">
                   <input type="text" id="subject" name="subject" class="form-control">
-                  <label for="subject" class="">Subject</label>
+                  <label for="subject" class="">{{ 'home.contact.form.subject' | translate }}</label>
               </div>
           </div>
       </div>
@@ -40,35 +40,27 @@ import $ from 'jquery';
           <div class="col-md-12">
               <div class="md-form">
                   <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                  <label for="message">Your message</label>
+                  <label for="message">{{ 'home.contact.form.message' | translate }}</label>
               </div>
           </div>
       </div>
   </form>
   <div class="text-center text-md-left">
-      <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+      <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">{{ 'home.contact.form.send' | translate }}</a>
   </div>
   <div class="status"></div>
 </div>
 <div class="col-md-3 text-center">
-  <ul class="list-unstyled mb-0">
-      <li><i class="fa fa-map-marker fa-2x"></i>
-          <p>San Francisco, CA 94126, USA</p>
-      </li>
-
-      <li><i class="fa fa-phone mt-4 fa-2x"></i>
-          <p>+ 01 234 567 89</p>
-      </li>
-
-      <li><i class="fa fa-envelope mt-4 fa-2x"></i>
-          <p>contact@mdbootstrap.com</p>
+  <ul class="list-unstyled mb-0" *ngFor="let cinfo of ( 'home.contact.links' | translate )">
+      <li><i class="fa fa-{{ cinfo.icon }} fa-2x"></i>
+          <p>{{ cinfo.text }}</p>
       </li>
   </ul>
 </div>
   </div>
   </div>`,
   // tslint:disable-next-line:max-line-length
-  styles: ['input {border:none;border-bottom: solid 1px #000;border-radius: 0%;}textarea {border: none;}label {position: absolute;top: .5em;}input:focus {border:none;border-bottom: solid #0ff 2px;box-shadow: 0 0 0em;}input:focus + label, textarea:focus + label, input.filled + label, textarea.filled + label{top: -1.5em;}']
+  styles: ['input {border:none;border-bottom: solid 1px #000;border-radius: 0%;background-color: transparent;}textarea {border: solid 1px black; background: transparent;}label {position: absolute;top: .5em;transition:linear .5s}input:focus {border:none;border-bottom: solid #0ff 2px;box-shadow: 0 0 0em;background-color: transparent;}input:focus + label, textarea:focus + label, input.filled + label, textarea.filled + label{top: -1.5em;}']
 })
 export class ContactmeComponent implements OnInit {
   constructor() { }
