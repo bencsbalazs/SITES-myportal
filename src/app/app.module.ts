@@ -24,6 +24,7 @@ import { PartnersComponent } from './partners/partners.component';
 import { ContactmeComponent } from './contactme/contactme.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     PartnersComponent,
     ContactmeComponent,
     AboutmeComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
