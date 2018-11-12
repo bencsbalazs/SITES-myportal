@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
     </div>
   </div>`,
   // tslint:disable-next-line:max-line-length
-  styles: ['.partner{filter: grayscale(100%);height:150px;}.partner img{display: block;opacity:0.8;width:100%;height:100%;object-fit: contain;overflow: hidden;}']
+  styles: ['.partner{filter: grayscale(100%);height:150px;transition:linear .5s;}.partner:hover{filter: grayscale(0%);transition:linear .5s;}.partner img{display: block;opacity:0.8;width:100%;height:100%;object-fit: contain;overflow: hidden;}']
 })
 export class PartnersComponent implements OnInit {
   constructor() { }

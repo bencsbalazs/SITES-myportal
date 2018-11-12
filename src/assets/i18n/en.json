@@ -18,28 +18,23 @@
     "menu": [
       {
         "title": "Home",
-        "link": "/home",
-        "scroll": "pageScroll"
+        "link": "/home"
       },
       {
         "title": "Blog",
-        "link": "/home#blog",
-        "scroll": "pageScroll"
+        "link": "#blog"
       },
       {
         "title": "About Me",
-        "link": "/home#services",
-        "scroll": "pageScroll"
+        "link": "#services"
       },
       {
         "title": "Portfolio",
-        "link": "/home#portfolio",
-        "scroll": "pageScroll"
+        "link": "#portfolio"
       },
       {
         "title": "Contact Me",
-        "link": "/home#contactme",
-        "scroll": "pageScroll"
+        "link": "#contactme"
       }
     ],
     "search": "Search"
@@ -55,12 +50,12 @@
       {
         "name": "Twitter",
         "class": "fa-twitter-square",
-        "link": ""
+        "link": "https://twitter.com/BencsBalzs"
       },
       {
         "name": "Google+",
         "class": "fa-google-plus-square",
-        "link": ""
+        "link": "https://plus.google.com/115324158791510458707"
       },
       {
         "class": "fa-linkedin",
@@ -68,7 +63,7 @@
       },
       {
         "class": "fa-instagram",
-        "link": ""
+        "link": "https://www.instagram.com/bencsbalazs/"
       },
       {
         "class": "fa-github",
@@ -77,25 +72,25 @@
     ]
   },
   "footer": {
-    "desc": "Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "desc": "Balazs Bencs is a web/application developer at IBM, prefering the linux based operating systems. He loves the open source technologies, Cloud technologies and Artificial Intelligence. He likes to discover, learn and share new technologies.",
     "apps": {
       "title": "Products",
       "links": [
         {
           "name": "Moodle portal",
-          "link": ""
+          "link": "https://localhost:6001"
         },
         {
           "name": "Drupal site",
-          "link": ""
+          "link": "https://localhost:6002"
         },
         {
           "name": "Wordpress blog",
-          "link": ""
+          "link": "https://bencsbalazs.wordpress.com/"
         },
         {
           "name": "Blogger profile",
-          "link": ""
+          "link": "https://bencsb.blogspot.com/"
         }
       ]
     },
@@ -121,28 +116,34 @@
       "slogan": "These are my main activities.",
       "tiles": [
         {
+          "icon": "code",
           "title": "Development",
-          "text": "Application development in AngularJS or Angular2-6."
+          "text": "Application / portal development using the following technologies: node, Angular, CSS animations, Canvas, PHP, JavaScript, HTML5-6."
         },
         {
+          "icon": "graduation-cap",
           "title": "E-learning",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+          "text": "Professional e-learning contents supporting the SCORM and the WCAG standards, that can be used in frameworks or as stand alone contents as well."
         },
         {
+          "icon": "wordpress",
           "title": "Frameworks",
-          "text": "Well-proven, popular frameworks: Drupal, Moodle, Wordpress installation, design, plugin and feature development."
+          "text": "Well-proven, popular frameworks: Drupal, Moodle, Wordpress installation, design, plugin and feature development. Optimalisation, or upgrading."
         },
         {
+          "icon": "coffee",
           "title": "Agile",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+          "text": "Working in an agile view, organise or coach this way of working. On the other hand, I can teach any of the mentioned technologies in a professional level."
         },
         {
-          "title": "Coaching",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+          "icon": "database",
+          "title": "Data handling",
+          "text": "Organise manipulate or create your data in a relational or non relational database like SQL or MongoDB. Develop the structure of the database or the data models. Documentation with the UML standard."
         },
         {
+          "icon": "cloud",
           "title": "Cloud",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec. "
+          "text": "Develop Cloud based applications like chatbots, helper robots or virtual workmates. I prefer the IBM cloud, Watson technologie, Google Cloud and Nore-Red for these works."
         }
       ]
     },
@@ -151,22 +152,28 @@
       "slogan": "View the story of my career.",
       "steps": [
         {
-          "title": "Lorem ipsum dolor sit amet",
-          "icon": "book",
-          "date": "Lorem ipsum",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+          "title": "First steps",
+          "icon": "laptop",
+          "date": "~2006",
+          "text": "At the biginning, I create game hacks, trainers, easy installers just for myself. I developed some webpages just for fun, but these were very succesfull, so because of this I got some order."
         },
         {
-          "title": "Lorem ipsum dolor sit amet",
-          "icon": "book",
-          "date": "Lorem ipsum",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+          "title": "The official learning",
+          "icon": "tablet",
+          "date": "2009-2011",
+          "text": "I went to the University of Dunaújváros, and got the Network engineer degree. After that they asked me to stay in the scool to work."
         },
         {
-          "title": "Lorem ipsum dolor sit amet",
-          "icon": "book",
-          "date": "Lorem ipsum",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa eget velit ullamcorper sodales a ac lacus. Sed et commodo massa. Curabitur eget velit nunc. Fusce finibus condimentum velit, at volutpat nisl facilisis nec."
+          "title": "Work like a pro",
+          "icon": "desktop",
+          "date": "2011-2017 Dec",
+          "text": "I worked at DUE and OneTech Kft at the same time. I developed portals, applications and learning materials to companies like Máv-Start, Gysev, Raiffeisen bank, Evosoft, Nébih. Tooke part in countrywide elearning projects with the school."
+        },
+        {
+          "title": "The Big Blue",
+          "icon": "server",
+          "date": "2017 Dec - recently",
+          "text": "I started to work at IBM ISSC Hungary as a web developer. I learned the agile view and design thinking practices to make my work more affective. Now, I work with the most modern technologies in wordwide projects and I develop apps in a very high level in node and angular."
         }
       ]
     },
@@ -175,7 +182,7 @@
       "slogan": "Some of my partners",
       "images": [
         {
-          "src": "/assets/images/portfolio/portfolio_mav.jpg",
+          "src": "/assets/images/portfolio/portfolio_mav.png",
           "title": "Máv-Start Zrt.",
           "alt": "Máv logo"
         },
@@ -195,12 +202,12 @@
           "alt": "IBM logo"
         },
         {
-          "src": "/assets/images/portfolio/portfolio_nebih.jpg",
+          "src": "/assets/images/portfolio/portfolio_nebih.png",
           "title": "Magyar Nemzeti ÉlelmiszerBiztonsági Hivatal",
           "alt": "Logo of Nebih"
         },
         {
-          "src": "/assets/images/portfolio/portfolio_raiffeisen.jpg",
+          "src": "/assets/images/portfolio/portfolio_raiffeisen.png",
           "title": "Raiffeisen Bank Zrt.",
           "alt": "Logo of Raiffeisen"
         }
@@ -208,7 +215,69 @@
     },
     "aboutme": {
       "title": "AboutMe",
-      "slogan": "Some of my resultss I'm proud of"
+      "slogan": "Some of my resultss I'm proud of",
+      "slides": [
+        {
+          "small": "/assets/images/badges/bluemix-essentials.png",
+          "medium": "/assets/images/badges/bluemix-essentials.png",
+          "big": "/assets/images/badges/bluemix-essentials.png",
+          "description": "This badge holder has a understanding of the essentials of IBM Cloud. Through an online course they have learned about the IBM Cloud platform and gained hands-on experience using the Cloud Foundry command-line interface and the IBM Eclipse tools for IBM Cloud. The badge earner has used these tools to deploy and modify basic applications using a managed service in IBM Cloud.",
+          "url": "https://www.youracclaim.com/badges/b56295bf-abed-48b6-a04e-6c3e69da8bca",
+          "label": "IBM Cloud Essentials"
+        },
+        {
+          "small": "/assets/images/badges/node-red-basics-to-bots.png",
+          "medium": "/assets/images/badges/node-red-basics-to-bots.png",
+          "big": "/assets/images/badges/node-red-basics-to-bots.png"
+        },
+        {
+          "small": "/assets/images/badges/build-chatbots-with-watson-conversation.png",
+          "medium": "/assets/images/badges/build-chatbots-with-watson-conversation.png",
+          "big": "/assets/images/badges/build-chatbots-with-watson-conversation.png"
+        },
+        {
+          "small": "/assets/images/badges/enterprise-design-thinking-practitioner.png",
+          "medium": "/assets/images/badges/enterprise-design-thinking-practitioner.png",
+          "big": "/assets/images/badges/enterprise-design-thinking-practitioner.png"
+        },
+        {
+          "small": "/assets/images/badges/ibm-agile-explorer.png",
+          "medium": "/assets/images/badges/ibm-agile-explorer.png",
+          "big": "/assets/images/badges/ibm-agile-explorer.png",
+          "description": "The Agile Explorer has a foundational understanding of Agile values, principles, and practices that allows them to initiate an Agile conversation with co-workers and colleagues.",
+          "url": "https://www.youracclaim.com/badges/2e9d7b8c-5d79-4bdf-9df5-7349dafefed8"
+        },
+        {
+          "small": "/assets/images/badges/ibm-mentor.png",
+          "medium": "/assets/images/badges/ibm-mentor.png",
+          "big": "/assets/images/badges/ibm-mentor.png"
+        },
+        {
+          "small": "/assets/images/badges/html.jpg",
+          "medium": "/assets/images/badges/html.jpg",
+          "big": "/assets/images/badges/html.jpg"
+        },
+        {
+          "small": "/assets/images/badges/css.jpg",
+          "medium": "/assets/images/badges/css.jpg",
+          "big": "/assets/images/badges/css.jpg"
+        },
+        {
+          "small": "/assets/images/badges/sql.jpg",
+          "medium": "/assets/images/badges/sql.jpg",
+          "big": "/assets/images/badges/sql.jpg"
+        },
+        {
+          "small": "/assets/images/badges/javascript.jpg",
+          "medium": "/assets/images/badges/javascript.jpg",
+          "big": "/assets/images/badges/javascript.jpg"
+        },
+        {
+          "small": "/assets/images/badges/php.jpg",
+          "medium": "/assets/images/badges/php.jpg",
+          "big": "/assets/images/badges/php.jpg"
+        }
+      ]
     },
     "contact": {
       "title": "Contact Me",
@@ -228,6 +297,11 @@
           "icon": "slack",
           "link": "",
           "text": "balazs.bencs@ibm.com"
+        },
+        {
+          "icon": "skype",
+          "link": "",
+          "text": "bencsbalazs"
         }
       ],
       "form": {

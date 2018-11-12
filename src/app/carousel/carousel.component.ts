@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import $ from 'jquery';
-import * as data from '../../assets/i18n/en.json';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-carousel',
   template: `
@@ -21,17 +22,18 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class CarouselComponent implements OnInit {
   images: Array<string>;
-  slides = (<any>data).header.carousel.length;
+  slides;
   list = [];
   i = 1;
   prevScrollPos = window.innerHeight * 0.1;
-  constructor(config: NgbCarouselConfig, private _http: HttpClient) {
+
+  constructor(config: NgbCarouselConfig, private _http: HttpClient, private translate: TranslateService) {
     config.showNavigationArrows = false;
     config.showNavigationIndicators = false;
   }
   ngOnInit() {
     window.onload = window.onscroll = this.sloganToggle;
-    while (this.list.push(this.i++) <= this.slides) { }
+    this.translate.get('header.carousel').subscribe(value => {while (this.list.push(this.i++) <= value.length) {}});
     this._http.get('https://picsum.photos/list')
       .pipe(map((images: Array<{ id: number }>) => this._randomImageUrls(images)))
       .subscribe(images => this.images = images);
@@ -44,7 +46,6 @@ export class CarouselComponent implements OnInit {
   }
   private sloganToggle = () => {
     const currentScrollPos = window.pageYOffset;
-    console.log(currentScrollPos);
       if (this.prevScrollPos >= currentScrollPos) {
         $('.carousel-caption').css('display', 'block');
       } else {

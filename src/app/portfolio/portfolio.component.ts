@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
             <ul class="timeline">
               <li>
                 <div class="timeline-image">
-                  <h4 class='fa fa-book'></h4>
+                  <h4 class='fa fa-user'></h4>
                 </div>
               </li>
               <li *ngFor="let step of ( 'home.portfolio.steps' | translate ); let i=index; let even=even;" [class.even]="even">
@@ -30,7 +30,7 @@ import { Component, OnInit } from '@angular/core';
               </li>
               <li>
                 <div class="timeline-image">
-                  <h4 class='fa fa-book'></h4>
+                  <h3 class="m-auto">Be<br>part of<br>the<br>story</h3>
                 </div>
               </li>
             </ul>

@@ -18,7 +18,6 @@ export class AppComponent implements OnInit, OnDestroy {
     this.translate.use(language);
   }
   ngOnInit() {
-
     this.wowSubscription = this.wowService.itemRevealed$.subscribe(
       (item: HTMLElement) => {
       });

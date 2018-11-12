@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgStickyDirective } from 'ng-sticky';
 import { NgwWowModule } from 'ngx-wow';
 import { NgxGalleryModule } from 'ngx-gallery';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -48,6 +49,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule,
     NgxGalleryModule,
+    Ng2PageScrollModule,
     NgwWowModule.forRoot(),
     NgbModule.forRoot(),
     TranslateModule.forRoot({

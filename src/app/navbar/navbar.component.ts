@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
   <div class="collapse navbar-collapse pull-left" id="navbarCollapse">
     <ul class="navbar-nav mr-auto" data-spy="scroll" data-offset="0" data-target="navbarCollapse">
       <li *ngFor="let item of ('navbar.menu' | translate)" class='nav-item'>
-        <a class="nav-link" href='{{item.link}}'>{{item.title}}</a>
+        <a class="nav-link" pageScroll href='{{item.link}}'>{{item.title}}</a>
       </li>
     </ul>
     <form class="form-inline mt-2 mt-md-0">

@@ -52,9 +52,9 @@ import $ from 'jquery';
 </div>
 <div class="col-md-3 text-center">
   <ul class="list-unstyled mb-0" *ngFor="let cinfo of ( 'home.contact.links' | translate )">
-      <li><i class="fa fa-{{ cinfo.icon }} fa-2x"></i>
+      <a href="{{ cinfo.link }}" target="_blank"><li><i class="fa fa-{{ cinfo.icon }} fa-2x"></i>
           <p>{{ cinfo.text }}</p>
-      </li>
+      </li></a>
   </ul>
 </div>
   </div>
