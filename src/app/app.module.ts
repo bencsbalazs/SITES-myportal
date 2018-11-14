@@ -13,11 +13,10 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { CommonService } from './common.service';
 
-import { BlogComponent } from './blog/blog/blog.component';
-import { LoginComponent } from './blog/login/login.component';
-import { NewPostComponent } from './blog/newpost/newpost.component';
+import { BlogComponent } from './blog/blog.component';
 
 import { CarouselComponent } from './carousel/carousel.component';
 import { ServicesComponent } from './services/services.component';
@@ -32,8 +31,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     BlogComponent,
-    LoginComponent,
-    NewPostComponent,
     NgStickyDirective,
     CarouselComponent,
     ServicesComponent,
@@ -48,6 +45,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     HttpClientModule,
+    HttpModule,
     NgxGalleryModule,
     Ng2PageScrollModule,
     NgwWowModule.forRoot(),
