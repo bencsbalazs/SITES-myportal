@@ -26,6 +26,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     ContactmeComponent,
     AboutmeComponent,
     PortfolioComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

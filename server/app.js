@@ -54,7 +54,8 @@ app.get('/api/blog/list', (req, res) => {
     if (err) throw err;
     db.collection('posts').find().toArray((error, result) => {
       if (error) throw error
-      res.send(result);
+      console.log(result)
+      res.send(result).end()
     });
     db.close();
   })

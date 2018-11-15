@@ -3,10 +3,11 @@ import { HttpClient } from '@angular/common/http'
 
 @Injectable()
 
-export class BlogList{
-  constructor(private http: HttpClient){}
+export class Blog {
+  constructor(private http: HttpClient) { }
 
-  getData(url:string){
+  getData(url: string) {
     return this.http.get(url)
   }
+
 }
