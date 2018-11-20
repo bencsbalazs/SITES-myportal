@@ -35,12 +35,14 @@ app.post('/api/user/login', (req, res) => {
   });
 })
 
-app.get('/api/blog/add', (req, res) => {
+app.post('/api/blog/add', (req, res) => {
   mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
     db.collection('posts').insertOne({
       title: req.query.title,
-      content: req.query.content
+      content: req.query.content,
+      date: req.query.date,
+      tags: req.query.tags
     }, (error, response) => {
       if (error) throw error;
       res.send(response);

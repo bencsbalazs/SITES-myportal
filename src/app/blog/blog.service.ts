@@ -10,4 +10,8 @@ export class Blog {
     return this.http.get(url)
   }
 
+  postData(url: string, data: object){
+    return this.http.post(url, JSON.stringify(data))
+  }
+
 }

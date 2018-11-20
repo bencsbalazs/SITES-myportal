@@ -1,48 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import { Blog } from './blog.service';
 
 @Component({
   selector: 'app-home-blog',
   template: `
   <div class="container maincontainer">
-  <div class="row">
-    <div class="col-md-8 blog-main">
-      <div class="blog-post" *ngFor="let post of blogposts">
-        <h2 class="blog-post-title">{{post.title}}</h2>
-        <p class="blog-post-meta">January 1, 2014 by
-          <a href="#">Mark</a>
-        </p>
-        {{ post.content }}
+    <div class="row">
+      <div class="col-12">
+        <router-outlet></router-outlet>
       </div>
-      <nav class="blog-pagination w-100">
-        <a class="btn btn-outline-primary col-6" href="#">Older</a>
-        <a class="btn btn-outline-secondary col-6" href="#">Newer</a>
-      </nav>
     </div>
-    <aside class="col-md-4 blog-sidebar">
-      <div class="p-3">
-        <h4 class="font-italic">Archives</h4>
-        <ol class="list-unstyled mb-0" *ngFor="let title of blogposts">
-          <li><a href="{{title.id}}">{{title.title}}</a></li>
-        </ol>
-      </div>
-      <button class="btn btn-lg btn-primary">New post</button>
-    </aside>
   </div>
-</div>`,
-  styles: [''],
-  providers:[Blog],
+  `,
+  styles: ['']
 })
 export class BlogComponent implements OnInit {
-  blogposts;
-  constructor(private blog: Blog) {
+  /* dashBoard = `
+  <div class="col-12">
+      <div class="row blog-post my-4" *ngFor="let post of blogposts">
+        <h2 class="col-lg-4 blog-post-title">{{post.title}}</h2>
+        <p class="col-lg-3 blog-post-meta">{{post._id}}</p>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-2">
+          <button class="btn-sm btn-danger fa fa-trash"></button>
+          <button class="btn-sm btn-warning fa fa-pencil"></button>
+        </div>
+      </div>
+      <div class="row">
+        <button *ngIf="login" class="btn btn-lg btn-primary m-4">New post</button>
+        <button (click)="login = !login" class="btn btn-lg btn-primary m-4">Logout</button>
+      </div>
+    </div>` */
+
+  constructor() {
   }
 
   ngOnInit() {
-    this.blog.getData('http://localhost:3000/api/blog/list').subscribe(
-      data => this.blogposts = data,
-      error => console.log(error)
-    )
   }
 
 }

@@ -17,6 +17,9 @@ import { HttpModule } from '@angular/http';
 import { CommonService } from './common.service';
 
 import { BlogComponent } from './blog/blog.component';
+import { BlogMainComponent } from './blog/blogmain.component';
+import { NewPostComponent } from './blog/newpost.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { CarouselComponent } from './carousel/carousel.component';
 import { ServicesComponent } from './services/services.component';
@@ -27,11 +30,18 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+  {path: "", component: BlogMainComponent},
+  {path: "newpost", component: NewPostComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
+    BlogMainComponent,
+    NewPostComponent,
     NgStickyDirective,
     CarouselComponent,
     ServicesComponent,
@@ -46,6 +56,11 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     CommonModule,
     FormsModule,
+    CKEditorModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    ),
     HttpClientModule,
     HttpModule,
     NgxGalleryModule,
