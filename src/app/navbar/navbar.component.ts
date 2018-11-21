@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: "app-navbar",
   template: `
   <nav class="navbar navbar-expand-md navbar-dark bg-dark" ng-sticky="ng-sticky" [offSet]="0" [addClass]="'is-sticky'">
-  <a class="navbar-brand" href="/">{{ 'header.title' | translate }}</a>
+  <a class="navbar-brand" href="/">{{ 'navbar.title' | translate }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

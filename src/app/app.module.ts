@@ -34,7 +34,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   {path: "", component: BlogMainComponent},
-  {path: "newpost", component: NewPostComponent}
+  {path: "newpost", component: NewPostComponent},
+  {path: "blog/:id", component: BlogMainComponent}
 ]
 @NgModule({
   declarations: [

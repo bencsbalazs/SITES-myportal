@@ -38,29 +38,32 @@ app.post('/api/user/login', (req, res) => {
 app.post('/api/blog/add', (req, res) => {
   mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
+    console.log("Ez a jó: ", req.body)
     db.collection('posts').insertOne({
-      title: req.query.title,
-      content: req.query.content,
-      date: req.query.date,
-      tags: req.query.tags
+      title: req.body.title,
+      content: req.body.content,
+      date: req.body.date,
+      tags: req.body.tags
     }, (error, response) => {
-      if (error) throw error;
+      if (error) res.send(error);
       res.send(response);
     })
     db.close();
   })
 })
 
-app.get('/api/blog/list', (req, res) => {
+app.get('/api/blog/list/:id', (req, res) => {
+  const id = req.params.id;
+  if (id == 0) {
   mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
     db.collection('posts').find().toArray((error, result) => {
       if (error) throw error
-      console.log(result)
       res.send(result).end()
     });
     db.close();
   })
+}
 })
 
 app.listen(3000, () => console.log('blog server running on port 3000!'))

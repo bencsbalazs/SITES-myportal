@@ -22,7 +22,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class AboutmeComponent implements OnInit {
   galleryImages: NgxGalleryImage[];
   galleryOptions: NgxGalleryOptions[];
-  constructor(private translate: TranslateService){}
+  constructor(private translate: TranslateService) { }
   ngOnInit() {
     this.galleryOptions = [
       {
@@ -52,6 +52,6 @@ export class AboutmeComponent implements OnInit {
         preview: false
       }
     ];
-    this.translate.get('home.aboutme.slides').subscribe(value => {this.galleryImages = value;})
+    this.translate.get('home.aboutme.slides').subscribe(value => { this.galleryImages = value; })
   }
 }

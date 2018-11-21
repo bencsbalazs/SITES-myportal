@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { NgForm } from '@angular/forms';
 import { Blog } from './blog.service';
-
 @Component({
   template: `
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate class="row">
@@ -23,7 +22,7 @@ import { Blog } from './blog.service';
     <div class="col-md-4">
     <button type="submit" class="btn btn-lg m-3 btn-success">Submit</button>
     <button type="reset" class="btn btn-lg m-3 btn-warning">Empty</button>
-    <button type="button" class="btn btn-lg m-3 btn-danger">Cancel</button>
+    <a href="/#blog" class="btn btn-lg m-3 btn-danger">Cancel</a>
     <button type="button" class="btn btn-lg m-3 btn-info">Logout</button>
     </div>
     </form>`,
@@ -32,11 +31,8 @@ import { Blog } from './blog.service';
 })
 export class NewPostComponent implements OnInit {
   constructor(private blog: Blog) {}
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
   onSubmit(f: NgForm) {
-
     this.blog.postData('http://localhost:3000/api/blog/add', f.value).subscribe(
       data => console.log(data),
       error => console.log(error)

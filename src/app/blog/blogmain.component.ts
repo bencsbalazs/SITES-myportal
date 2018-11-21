@@ -7,7 +7,8 @@ import { Blog } from './blog.service';
     <div class="col-md-8 blog-main">
     <div class="blog-post" *ngFor="let post of blogposts">
       <h2 class="blog-post-title">{{post.title}}</h2>
-      <p class="blog-post-meta">January 1, 2014 by <a href="#"></a></p>
+      <p class="blog-post-meta">{{ post.tags }}</p>
+      <p class="blog-post-meta">{{ post.date }} by {{ 'header.title' | translate }}</p>
       {{ post.content }}
     </div>
     <nav class="blog-pagination w-100">
@@ -17,10 +18,10 @@ import { Blog } from './blog.service';
   </div>
   <aside class="col-md-4 blog-sidebar">
     <div class="p-3">
-      <button (click)="blogContent = dashBoard" class="btn btn-lg btn-primary">Login</button>
+      <a href="http://localhost:4200/newpost#blog" class="btn btn-lg btn-primary">NewPost</a>
       <h4 class="font-italic">Archives</h4>
       <ol class="list-unstyled mb-0" *ngFor="let title of blogposts">
-        <li><a href="{{title.id}}">{{title.title}}</a></li>
+        <li><a href="{{ title._id }}">{{title.title}}</a></li>
       </ol>
     </div>
   </aside>
@@ -34,9 +35,9 @@ export class BlogMainComponent implements OnInit {
   }
   blogposts
   ngOnInit() {
-    this.blog.getData('http://localhost:3000/api/blog/list').subscribe(
+    this.blog.getData('http://localhost:3000/api/blog/list/0').subscribe(
       data => this.blogposts = data,
-      error => console.log(error)
+      error => console.log(error),
     )
   }
 }
