@@ -18,6 +18,7 @@ import { CommonService } from './common.service';
 
 import { BlogComponent } from './blog/blog.component';
 import { BlogMainComponent } from './blog/blogmain.component';
+import { BlogPostComponent } from './blog/blogpost.component';
 import { NewPostComponent } from './blog/newpost.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
@@ -35,13 +36,15 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   {path: "", component: BlogMainComponent},
   {path: "newpost", component: NewPostComponent},
-  {path: "blog/:id", component: BlogMainComponent}
+  {path: "blog", component: BlogMainComponent},
+  {path: "blog/:id", component: BlogPostComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
     BlogMainComponent,
+    BlogPostComponent,
     NewPostComponent,
     NgStickyDirective,
     CarouselComponent,

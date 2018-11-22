@@ -38,7 +38,6 @@ app.post('/api/user/login', (req, res) => {
 app.post('/api/blog/add', (req, res) => {
   mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
-    console.log("Ez a jó: ", req.body)
     db.collection('posts').insertOne({
       title: req.body.title,
       content: req.body.content,
@@ -52,9 +51,8 @@ app.post('/api/blog/add', (req, res) => {
   })
 })
 
-app.get('/api/blog/list/:id', (req, res) => {
+app.get('/api/blog/list', (req, res) => {
   const id = req.params.id;
-  if (id == 0) {
   mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
     db.collection('posts').find().toArray((error, result) => {
@@ -63,7 +61,6 @@ app.get('/api/blog/list/:id', (req, res) => {
     });
     db.close();
   })
-}
 })
 
 app.listen(3000, () => console.log('blog server running on port 3000!'))
