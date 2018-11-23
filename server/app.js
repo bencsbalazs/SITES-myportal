@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config();
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = express()
@@ -52,7 +53,6 @@ app.post('/api/blog/add', (req, res) => {
 })
 
 app.get('/api/blog/list', (req, res) => {
-  const id = req.params.id;
   mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
     db.collection('posts').find().toArray((error, result) => {
@@ -62,5 +62,20 @@ app.get('/api/blog/list', (req, res) => {
     db.close();
   })
 })
+
+app.get('/api/blog/:id', (req, res) => {
+  const id = req.params.id;
+  mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
+    if (err) throw err;
+    db.collection('posts').find({"_id":mongoose.Types.ObjectId(id)}).toArray((error, result) => {
+      if (error) throw error
+      console.log(result)
+      res.send(result).end()
+    });
+    db.close();
+  })
+})
+
+console.log(process.env.BACKENDPORT)
 
 app.listen(3000, () => console.log('blog server running on port 3000!'))

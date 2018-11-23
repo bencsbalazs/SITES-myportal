@@ -31,7 +31,7 @@ export class BlogMainComponent implements OnInit {
   }
   blogposts
   ngOnInit() {
-    this.blog.getData('http://localhost:3000/api/blog/list').subscribe(
+    this.blog.getData('http://localhost:3000/api/blog/list','').subscribe(
       data => this.blogposts = data,
       error => console.log(error),
     )

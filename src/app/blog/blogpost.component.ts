@@ -6,12 +6,11 @@ import { ActivatedRoute } from '@angular/router';
   template: `
   <div class="row">
     <div class="col-md-8 blog-main">
-    <h1>Plogpost: {{ id }}</h1>
-    <div class="blog-post">
+    <div class="blog-post" *ngFor="let post of currentpost">
       <h2 class="blog-post-title">{{post.title}}</h2>
-      <p class="blog-post-meta">{{ currentpost.tags }}</p>
-      <p class="blog-post-meta">{{ currentpost.date }} by {{ 'header.title' | translate }}</p>
-      {{ currentpost.content }}
+      <p class="blog-post-meta">{{ post.tags }}</p>
+      <p class="blog-post-meta">{{ post.date }} by {{ 'header.title' | translate }}</p>
+      {{ post.content }}
     </div>
     <nav class="blog-pagination w-100">
       <a class="btn btn-outline-primary col-6" href="#">{{ 'blog.home.olderpost' | translate }}</a>
@@ -33,8 +32,7 @@ import { ActivatedRoute } from '@angular/router';
   providers: [Blog]
 })
 export class BlogPostComponent implements OnInit {
-  constructor(private blog: Blog, private route: ActivatedRoute) {
-  }
+  constructor(private blog: Blog, private route: ActivatedRoute) {}
   blogposts
   id
   currentpost
@@ -42,14 +40,14 @@ export class BlogPostComponent implements OnInit {
   nextid
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
-    this.blog.getData('http://localhost:3000/api/blog/list').subscribe(
-    data => this.blogposts = data,
+    this.blog.getData('http://localhost:3000/api/blog/list','').subscribe(
+      data => this.blogposts = data,
       error => console.log(error),
     )
-    for(const e of this.blogposts){
-      if (e.id == this.id){
-        this.currentpost = e
-      }
-    }
+    this.blog.getData('http://localhost:3000/api/blog/',this.id).subscribe(
+      data => this.currentpost = data,
+      error => console.log(error),
+    )
+
   }
 }
