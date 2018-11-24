@@ -76,6 +76,4 @@ app.get('/api/blog/:id', (req, res) => {
   })
 })
 
-console.log(process.env.BACKENDPORT)
-
-app.listen(3000, () => console.log('blog server running on port 3000!'))
+app.listen(process.env.BACKENDPORT, () => console.log('blog server running on port 3000!'))
