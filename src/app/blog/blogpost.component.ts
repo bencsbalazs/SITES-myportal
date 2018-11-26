@@ -12,14 +12,9 @@ import { ActivatedRoute } from '@angular/router';
       <p class="blog-post-meta">{{ post.date }} by {{ 'header.title' | translate }}</p>
       {{ post.content }}
     </div>
-    <nav class="blog-pagination w-100">
-      <a class="btn btn-outline-primary col-6" href="#">{{ 'blog.home.olderpost' | translate }}</a>
-      <a class="btn btn-outline-secondary col-6" href="#">{{ 'blog.home.newerpost' | translate }}</a>
-    </nav>
   </div>
   <aside class="col-md-4 blog-sidebar">
     <div class="p-3">
-      <a href="http://localhost:4200/newpost#blog" class="btn btn-lg btn-primary">NewPost</a>
       <h4 class="font-italic">Archives</h4>
       <ol class="list-unstyled mb-0" *ngFor="let title of blogposts">
         <li><a href="/blog/{{ title._id }}">{{title.title}}</a></li>

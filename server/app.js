@@ -4,7 +4,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = express()
 const mongoose = require('mongoose')
-const url = 'mongodb://localhost/test'
+const url = process.env.DBCONNECT
 
 const User = require('./model/user')
 const Post = require('./model/post')
@@ -15,6 +15,7 @@ app.use(cors())
 
 // Handle the login process
 app.post('/api/user/login', (req, res) => {
+  console.log("API called")
   mongoose.connect(url, function (err) {
     if (err) throw err;
     User.find({
@@ -76,4 +77,4 @@ app.get('/api/blog/:id', (req, res) => {
   })
 })
 
-app.listen(process.env.BACKENDPORT, () => console.log('blog server running on port 3000!'))
+app.listen(process.env.BACKENDPORT, () => console.log('blog server running on port'+process.env.BACKENDPORT+'!'))
