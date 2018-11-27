@@ -5,5 +5,11 @@
 
 export const environment = {
   production: false,
-  notLoggedIn: true
+  notLoggedIn: true,
+  backendurl: "localhost",
+  backendport: 3000,
+  frontendurl: "localhost",
+  frontendport: 4200,
+  blogurl: "/api/blog",
+  dbconnect: "mongodb://localhost/test"
 };

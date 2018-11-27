@@ -32,6 +32,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   {path: "", component: BlogMainComponent},
@@ -54,7 +55,8 @@ const appRoutes: Routes = [
     AboutmeComponent,
     PortfolioComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,11 @@
 const express = require('express')
-require('dotenv').config();
-const cors = require('cors')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser');
+const cors = require('cors')
+import * as jwt from 'jsonwebtoken';
+import * as fs from "fs";
+require('dotenv').config();
+
 const app = express()
 const mongoose = require('mongoose')
 const url = process.env.DBCONNECT
@@ -13,9 +17,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
+
+const RSA_PRIVATE_KEY = fs.readFileSync('./demos/private.key');
 // Handle the login process
 app.post('/api/user/login', (req, res) => {
-  console.log("API called")
   mongoose.connect(url, function (err) {
     if (err) throw err;
     User.find({
@@ -24,13 +29,16 @@ app.post('/api/user/login', (req, res) => {
       if (err) throw err;
       if (user.length === 1) {
         return res.status(200).json({
-          status: 'success',
-          data: user
+          data: jwt.sign({}, RSA_PRIVATE_KEY, {
+            algorithm: 'RS256',
+            expiresIn: 120,
+            subject: req.body.username
+          }
         })
       } else {
-        return res.status(200).json({
+        return res.status(401).json({
           status: 'fail',
-          message: 'Login Failed'
+          message: 'Unotharised'
         })
       }
     })
@@ -68,7 +76,7 @@ app.get('/api/blog/:id', (req, res) => {
   const id = req.params.id;
   mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
-    db.collection('posts').find({"_id":mongoose.Types.ObjectId(id)}).toArray((error, result) => {
+    db.collection('posts').find({ "_id": mongoose.Types.ObjectId(id) }).toArray((error, result) => {
       if (error) throw error
       console.log(result)
       res.send(result).end()
@@ -77,4 +85,4 @@ app.get('/api/blog/:id', (req, res) => {
   })
 })
 
-app.listen(process.env.BACKENDPORT, () => console.log('blog server running on port'+process.env.BACKENDPORT+'!'))
+app.listen(process.env.BACKENDPORT, () => console.log('blog server running on port' + process.env.BACKENDPORT + '!'))
