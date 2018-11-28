@@ -1,11 +1,9 @@
+const jwt = require('jsonwebtoken'),
+  fs = require("fs");
 const express = require('express')
 const bodyParser = require('body-parser')
-const cookieParser = require('cookie-parser');
 const cors = require('cors')
-import * as jwt from 'jsonwebtoken';
-import * as fs from "fs";
 require('dotenv').config();
-
 const app = express()
 const mongoose = require('mongoose')
 const url = process.env.DBCONNECT
@@ -17,8 +15,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
-
-const RSA_PRIVATE_KEY = fs.readFileSync('./demos/private.key');
 // Handle the login process
 app.post('/api/user/login', (req, res) => {
   mongoose.connect(url, function (err) {
@@ -29,11 +25,11 @@ app.post('/api/user/login', (req, res) => {
       if (err) throw err;
       if (user.length === 1) {
         return res.status(200).json({
-          data: jwt.sign({}, RSA_PRIVATE_KEY, {
+          data: jwt.sign({}, fs.readFileSync(__dirname+'/private.key'), {
             algorithm: 'RS256',
             expiresIn: 120,
             subject: req.body.username
-          }
+          })
         })
       } else {
         return res.status(401).json({

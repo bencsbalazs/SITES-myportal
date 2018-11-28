@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Blog } from '../blog/blog.service';
-import { environment } from '../../environments/environment'
+import { Component } from '@angular/core';
+import { AuthService } from '../login/login.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -20,20 +19,17 @@ import { NgForm } from '@angular/forms';
   <ng-template #popTitle>Login form</ng-template>
   <button type="button" class="btn btn-outline-secondary" placement="bottom" [ngbPopover]="popContent" [popoverTitle]="popTitle">Login</button>`,
   styles: [''],
-  providers: [Blog]
+  providers: [AuthService]
 })
-export class LoginComponent implements OnInit {
-
-  constructor(private blog: Blog) {}
-
-  ngOnInit() {}
+export class LoginComponent {
+  constructor(private authService: AuthService) { }
   onSubmit(loginForm: NgForm) {
-    this.blog.postData('http://localhost:3000/api/user/login', loginForm.value).subscribe(
-      data => {
-
-      },
-      error => console.log(error)
-    )
+    if (loginForm.value.username && loginForm.value.password) {
+      this.authService.login(loginForm.value.username, loginForm.value.password)
+        .subscribe(
+            data => console.log(data),
+            error => console.log(error)
+        )
+    }
   }
-
 }
