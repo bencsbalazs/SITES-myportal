@@ -35,10 +35,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
-  {path: "", component: BlogMainComponent},
-  {path: "newpost", component: NewPostComponent},
-  {path: "blog", component: BlogMainComponent},
-  {path: "blog/:id", component: BlogPostComponent}
+  { path: "", component: BlogMainComponent },
+  { path: "newpost", component: NewPostComponent },
+  { path: "blog", component: BlogMainComponent },
+  { path: "blog/:id", component: BlogPostComponent }
 ]
 @NgModule({
   declarations: [

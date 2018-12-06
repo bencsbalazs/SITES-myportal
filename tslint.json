@@ -2,6 +2,8 @@
   "extends": [
     "tslint-config-prettier"
   ],
+  "autoFixOnSave": true,
+  "formatOnSave": true,
   "defaultSeverity": "error",
   "rulesDirectory": [
     "node_modules/tslint-microsoft-contrib"
@@ -20,9 +22,21 @@
     ],
     "member-ordering": [
       true,
-      "public-before-private",
-      "static-before-instance",
-      "variables-before-functions"
+      {
+        "order": [
+          "public-before-private",
+          "static-before-instance",
+          "variables-before-functions"
+        ]
+      }
+    ],
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "any",
+        "named-imports-order": "case-insensitive",
+        "grouped-imports": true
+      }
     ],
     "adjacent-overload-signatures": true,
     "unified-signatures": true,
@@ -71,14 +85,6 @@
     ],
     "no-unnecessary-initializer": true,
     "no-implicit-dependencies": false,
-    "ordered-imports": [
-      true,
-      {
-        "import-sources-order": "any",
-        "named-imports-order": "case-insensitive",
-        "grouped-imports": true
-      }
-    ],
     "no-duplicate-imports": true,
     "import-blacklist": [
       true,
@@ -197,7 +203,7 @@
         "constructor": "never"
       }
     ],
-    "space-within-parens": 0,
+    "space-within-parens": false,
     "import-spacing": true,
     "no-trailing-whitespace": true,
     "newline-before-return": true,
@@ -215,9 +221,7 @@
       1
     ],
     "semicolon": [
-      true,
-      "always",
-      "strict-bound-class-methods"
+      false
     ],
     "align": [
       true,

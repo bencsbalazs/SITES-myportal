@@ -17,15 +17,16 @@ app.use(cors())
 
 // Handle the login process
 app.post('/api/user/login', (req, res) => {
-  mongoose.connect(url, function (err) {
+  console.log('Adatok: ')
+  mongoose.connect(url, { useNewUrlParser: true }, function (err) {
     if (err) throw err;
-    User.find({
+    db.collection('user').find({
       username: req.body.username, password: req.body.password
     }, function (err, user) {
       if (err) throw err;
       if (user.length === 1) {
         return res.status(200).json({
-          data: jwt.sign({}, fs.readFileSync(__dirname+'/private.key'), {
+          data: jwt.sign({}, fs.readFileSync(__dirname + '/private.key'), {
             algorithm: 'RS256',
             expiresIn: 120,
             subject: req.body.username
@@ -33,8 +34,8 @@ app.post('/api/user/login', (req, res) => {
         })
       } else {
         return res.status(401).json({
-          status: 'fail',
-          message: 'Unotharised'
+          status: "fail",
+          message: "Unotharised"
         })
       }
     })
