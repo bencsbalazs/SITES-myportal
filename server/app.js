@@ -1,15 +1,12 @@
-const jwt = require('jsonwebtoken'),
-  fs = require("fs");
-const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
 require('dotenv').config();
-const app = express()
-const mongoose = require('mongoose')
-const url = process.env.DBCONNECT
 
-const User = require('./model/user')
-const Post = require('./model/post')
+const jwt = require('jsonwebtoken'),
+  express = require('express'),
+  bodyParser = require('body-parser'),
+  cors = require('cors'),
+  app = express(),
+  mongoose = require('mongoose'),
+  url = process.env.DBCONNECT
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -17,20 +14,23 @@ app.use(cors())
 
 // Handle the login process
 app.post('/api/user/login', (req, res) => {
-  console.log('Adatok: ')
-  mongoose.connect(url, { useNewUrlParser: true }, function (err) {
+  mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
-    db.collection('user').find({
-      username: req.body.username, password: req.body.password
+    db.collection('user').findOne({
+      $and: [
+        { "username": req.body.username },
+        { "password": req.body.password }
+      ]
     }, function (err, user) {
       if (err) throw err;
-      if (user.length === 1) {
+      if (user) {
         return res.status(200).json({
-          data: jwt.sign({}, fs.readFileSync(__dirname + '/private.key'), {
-            algorithm: 'RS256',
-            expiresIn: 120,
-            subject: req.body.username
-          })
+          data: jwt.sign({
+            id: user._id
+          },
+            '71F66E5233A19139C26BDBC35FCFA20E80E01C0467CF27D0D970B5E1F13EBAF7675B3AE4F30214AAF995AA47C3A913BD22D957612D0D647DE34CDCE00A2EF0BC',
+            { expiresIn: '1h' }
+          )
         })
       } else {
         return res.status(401).json({

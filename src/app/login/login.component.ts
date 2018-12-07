@@ -26,10 +26,6 @@ export class LoginComponent {
   onSubmit(loginForm: NgForm) {
     if (loginForm.value.username && loginForm.value.password) {
       this.authService.login(loginForm.value.username, loginForm.value.password)
-        .subscribe(
-            data => console.log(data),
-            error => console.log(error)
-        )
     }
   }
 }
