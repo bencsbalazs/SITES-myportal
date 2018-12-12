@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Blog } from './blog.service';
-import {environment} from '../../environments/environment'
+import { AuthService } from '../login/login.service';
 @Component({
   template: `
-  <div class="row" *ngIf="env.notLoggedIn; else elseBlock">
+  <div class="row" *ngIf="notLoggedIn; else elseBlock">
     <div class="col-md-8 blog-main">
     <div class="blog-post" *ngFor="let post of blogposts">
       <h2 class="blog-post-title">{{post.title}}</h2>
@@ -26,23 +26,24 @@ import {environment} from '../../environments/environment'
   <div class="col-12">
     <div class="row"></div>
     <div class="row">
-      <a (click)="env.notLoggedIn = !env.notLoggedIn" class="btn btn-lg btn-primary">LogOut</a>
+      <a (click)="" class="btn btn-lg btn-primary">LogOut</a>
       <a href="http://localhost:4200/newpost#blog" class="btn btn-lg btn-primary">NewPost</a>
     </div>
   </div>
 </ng-template>
   `,
   styles: [''],
-  providers: [Blog]
+  providers: [Blog, AuthService]
 })
 export class BlogMainComponent implements OnInit {
-  env = environment
-  constructor(private blog: Blog) {}
+  notloggedin
+  constructor(private blog: Blog, private authService: AuthService) { }
   blogposts
   ngOnInit() {
     this.blog.getData('http://localhost:3000/api/blog/list', '').subscribe(
       data => this.blogposts = data,
       error => console.log(error),
     )
+    this.notloggedin = !this.authService.isLoggedIn()
   }
 }
