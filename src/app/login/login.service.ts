@@ -1,23 +1,28 @@
 import * as moment from "moment";
-import { Injectable } from '@angular/core'
+import { Inject, Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
+import { SESSION_STORAGE, StorageService } from 'angular-webstorage-service'
+
 @Injectable()
 export class AuthService {
-  constructor(private http: HttpClient) { }
-  login(username: string, password: string) {
+  constructor(@Inject(SESSION_STORAGE) private storage: StorageService, private http: HttpClient) { }
+  login = (username: string, password: string) => {
     return this.http.post('http://localhost:3000/api/user/login', { username, password }).subscribe(
-      data => this.setSession(data),
+      data => {
+        this.setSession(data)
+        console.log(data)
+      },
       error => console.log(error)
     )
   }
   private setSession(authResult) {
-    const expiresAt = moment().add(3600, 'second');
-    localStorage.setItem('bls_token', authResult.data);
-    localStorage.setItem("bls_expir", JSON.stringify(expiresAt.valueOf()));
+    const expiresAt = moment().add(authResult.expires, 'second');
+    this.storage.set('bls_token', authResult.data);
+    this.storage.set("bls_expir", JSON.stringify(expiresAt.valueOf()));
   }
   logout() {
-    localStorage.removeItem("bls_token");
-    localStorage.removeItem("bls_expir");
+    this.storage.remove("bls_token");
+    this.storage.remove("bls_expir");
   }
   public isLoggedIn() {
     return moment().isBefore(this.getExpiration());
@@ -26,7 +31,7 @@ export class AuthService {
     return !this.isLoggedIn();
   }
   getExpiration() {
-    const expiration = localStorage.getItem("bls_expir");
+    const expiration = this.storage.get("bls_expir");
     const expiresAt = JSON.parse(expiration);
     return moment(expiresAt);
   }

@@ -3,7 +3,8 @@ import { Blog } from './blog.service';
 import { AuthService } from '../login/login.service';
 @Component({
   template: `
-  <div class="row" *ngIf="notLoggedIn; else elseBlock">
+  {{ isLoggedIn }}
+  <div class="row" ng-hide="isLoggedIn">
     <div class="col-md-8 blog-main">
     <div class="blog-post" *ngFor="let post of blogposts">
       <h2 class="blog-post-title">{{post.title}}</h2>
@@ -26,7 +27,7 @@ import { AuthService } from '../login/login.service';
   <div class="col-12">
     <div class="row"></div>
     <div class="row">
-      <a (click)="" class="btn btn-lg btn-primary">LogOut</a>
+      <a (click)="logout" class="btn btn-lg btn-primary">LogOut</a>
       <a href="http://localhost:4200/newpost#blog" class="btn btn-lg btn-primary">NewPost</a>
     </div>
   </div>
@@ -36,14 +37,15 @@ import { AuthService } from '../login/login.service';
   providers: [Blog, AuthService]
 })
 export class BlogMainComponent implements OnInit {
-  notloggedin
   constructor(private blog: Blog, private authService: AuthService) { }
+  isLoggedIn
   blogposts
+  logout = this.authService.logout()
   ngOnInit() {
+    this.isLoggedIn = this.authService.isLoggedIn()
     this.blog.getData('http://localhost:3000/api/blog/list', '').subscribe(
       data => this.blogposts = data,
       error => console.log(error),
     )
-    this.notloggedin = !this.authService.isLoggedIn()
   }
 }

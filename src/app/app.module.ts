@@ -9,6 +9,7 @@ import { NgStickyDirective } from 'ng-sticky';
 import { NgwWowModule } from 'ngx-wow';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { StorageServiceModule } from 'angular-webstorage-service'
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -63,9 +64,10 @@ const appRoutes: Routes = [
     CommonModule,
     FormsModule,
     CKEditorModule,
+    StorageServiceModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true }
+      { enableTracing: false }
     ),
     HttpClientModule,
     HttpModule,

@@ -25,12 +25,14 @@ app.post('/api/user/login', (req, res) => {
       if (err) throw err;
       if (user) {
         return res.status(200).json({
+          status: 'success',
           data: jwt.sign({
             id: user._id
           },
             '71F66E5233A19139C26BDBC35FCFA20E80E01C0467CF27D0D970B5E1F13EBAF7675B3AE4F30214AAF995AA47C3A913BD22D957612D0D647DE34CDCE00A2EF0BC',
             { expiresIn: '1h' }
-          )
+          ),
+          expires: 3600
         })
       } else {
         return res.status(401).json({
