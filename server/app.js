@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken'),
   express = require('express'),
   bodyParser = require('body-parser'),
   cors = require('cors'),
+  fs = require('fs'),
   app = express(),
   mongoose = require('mongoose'),
   url = process.env.DBCONNECT
@@ -11,6 +12,7 @@ const jwt = require('jsonwebtoken'),
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
+app.use(express.cookieParser())
 
 // Handle the login process
 app.post('/api/user/login', (req, res) => {
@@ -70,7 +72,7 @@ app.get('/api/blog/list', (req, res) => {
     db.close();
   })
 })
-
+/* 
 app.get('/api/blog/:id', (req, res) => {
   const id = req.params.id;
   mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
@@ -83,5 +85,17 @@ app.get('/api/blog/:id', (req, res) => {
     db.close();
   })
 })
+ */
+// Blog db fill
+app.post('/api/blog/fill', (req, res) => {
+  mongoose.connect(url, { useNewUrlParser: true }, function (error, db) {
+    if (error) throw error
+    fs.readFileSync(__dirname + '/../src/assets/blog/posts.json', (err, data) => {
+      if (err) throw err
+      db.collection('posts').insert(data)
+    })
+    db.close();
+  })
+})
 
-app.listen(process.env.BACKENDPORT, () => console.log('blog server running on port' + process.env.BACKENDPORT + '!'))
+app.listen(process.env.BACKENDPORT, () => console.log('blog server running on port ' + process.env.BACKENDPORT + '!'))

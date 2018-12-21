@@ -16,6 +16,7 @@ import { AuthService } from '../login/login.service';
   <aside class="col-md-4 blog-sidebar">
     <div class="p-3">
       <login></login>
+      <button (click)='SyncData()' class="btn btn-info">Sync documents</button>
       <h4 class="font-italic">Archives</h4>
       <ol class="list-unstyled mb-0" *ngFor="let title of blogposts">
         <li><a href="/blog/{{ title._id }}">{{title.title}}</a></li>
@@ -45,6 +46,13 @@ export class BlogMainComponent implements OnInit {
     this.isLoggedIn = this.authService.isLoggedIn()
     this.blog.getData('http://localhost:3000/api/blog/list', '').subscribe(
       data => this.blogposts = data,
+      error => console.log(error),
+    )
+  }
+  private SyncData = () => {
+    console.log('Sync started...')
+    this.blog.postData('http://localhost:3000/api/blog/fill', '').subscribe(
+      data => console.log(data),
       error => console.log(error),
     )
   }
