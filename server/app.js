@@ -78,7 +78,6 @@ app.get('/api/blog/:id', (req, res) => {
     if (err) throw err;
     db.collection('posts').find({ "_id": mongoose.Types.ObjectId(id) }).toArray((error, result) => {
       if (error) throw error
-      console.log(result)
       res.send(result).end()
     });
     db.close();
@@ -87,7 +86,6 @@ app.get('/api/blog/:id', (req, res) => {
 
 // Blog db fill
 app.post('/api/blog/fill', (req, res) => {
-  console.log("started")
   mongoose.connect(url, { useNewUrlParser: true }, function (error, db) {
     if (error) throw error
     fs.readFile(__dirname + '/posts.json', (err, data) => {
